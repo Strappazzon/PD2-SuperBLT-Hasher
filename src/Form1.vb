@@ -1,0 +1,122 @@
+﻿Imports System.IO
+Imports System.Net
+Imports ZNix.SuperBLT
+
+Public Class Form1
+    Private Const VersionCode As Short = 1
+
+    Private Sub UpgradeSettings()
+        'Migrate settings to the new version
+        'Unfortunately, settings migrate only if the new version is installed in the same directory as the old version
+        '//bytes.com/topic/visual-basic-net/answers/854235-my-settings-upgrade-doesnt-upgrade#post3426232
+        If My.Settings.MustUpgrade = True Then
+            My.Settings.Upgrade()
+            My.Settings.MustUpgrade = False
+        End If
+    End Sub
+
+    Private Sub HashInput(Path As String)
+        'Check whether the dropped item is a folder or a file
+        '//stackoverflow.com/a/439478
+        Dim IsDir As Boolean = (File.GetAttributes(Path) And FileAttributes.Directory) = FileAttributes.Directory
+
+        If IsDir = True Then
+            'Hash the selected folder
+            Dim Hash As String = Hasher.HashDirectory(Path)
+            HashTextBox.Text = Hash
+        Else
+            'Hash the selected file
+            Dim Hash As String = Hasher.HashFile(Path)
+            HashTextBox.Text = Hash
+        End If
+    End Sub
+
+    Private Sub Updater_DownloadStringCompleted(ByVal sender As Object, ByVal e As DownloadStringCompletedEventArgs)
+        If e.Error Is Nothing Then
+            Dim FetchedVer As Short = e.Result()
+
+            'Compare downloaded SuperBLT Hasher version number with the current one
+            If FetchedVer > VersionCode Then
+                MessageBox.Show("A newer version of SuperBLT Hasher is available. Do you want to visit the download page now?", "Update available", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
+            End If
+        End If
+    End Sub
+
+    Private Sub ToolTips_Draw(sender As Object, e As DrawToolTipEventArgs) Handles ToolTips.Draw
+        'Draw tooltip with custom colors
+        e.DrawBackground()
+        e.DrawBorder()
+        e.DrawText()
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Load settings
+        CopyToHashTxtCheckBox.Checked = My.Settings.WriteHashToFile
+        CopyToClipboardCheckBox.Checked = My.Settings.CopyHashToClipboard
+        UpdatesCheckBox.Checked = My.Settings.CheckUpdates
+
+        'Check for updates
+        If UpdatesCheckBox.Checked = True Then
+            Using Updater As New WebClient
+                Updater.Headers.Add("User-Agent", "SuperBLT Hasher (+https://strappazzon.xyz/PD2-SuperBLT-Hasher)")
+                Dim VersionURI As New Uri("https://raw.githubusercontent.com/Strappazzon/PD2-SuperBLT-Hasher/master/version")
+                Updater.DownloadStringAsync(VersionURI)
+                'Call updater_DownloadStringCompleted when the download completes
+                AddHandler Updater.DownloadStringCompleted, AddressOf Updater_DownloadStringCompleted
+            End Using
+        End If
+
+        'Customize tooltips
+        ToolTips.OwnerDraw = True
+        ToolTips.ForeColor = Color.FromArgb(255, 153, 153, 153)
+        ToolTips.BackColor = Color.FromArgb(255, 17, 17, 17)
+    End Sub
+
+    Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        'Save settings
+        My.Settings.WriteHashToFile = CopyToHashTxtCheckBox.CheckState
+        My.Settings.CopyHashToClipboard = CopyToClipboardCheckBox.CheckState
+        My.Settings.CheckUpdates = UpdatesCheckBox.CheckState
+    End Sub
+
+    Private Sub DragDropPanel_DragEnter(sender As Object, e As DragEventArgs) Handles DragDropPanel.DragEnter
+        'Accept only files and folders
+        '//stackoverflow.com/a/11686880
+        If e.Data.GetDataPresent(DataFormats.FileDrop) Then
+            e.Effect = DragDropEffects.Copy
+        End If
+    End Sub
+
+    Private Sub DragDropPanel_DragDrop(sender As Object, e As DragEventArgs) Handles DragDropPanel.DragDrop
+        Dim DroppedItems As String() = e.Data.GetData(DataFormats.FileDrop)
+
+        'Allow only one folder or file
+        If DroppedItems.Length <= 1 Then
+            'Write the folder or file path
+            PathTextBox.Text = DroppedItems.First
+
+            'Hash the input
+            HashInput(PathTextBox.Text)
+
+            'Write the hash to a text file
+            If CopyToHashTxtCheckBox.Checked = True Then
+                Using S As New SaveFileDialog
+                    S.Title = "Save hash as..."
+                    S.InitialDirectory = PathTextBox.Text
+                    S.FileName = "hash"
+                    S.Filter = "Text file|.txt"
+                    If S.ShowDialog = DialogResult.OK Then
+                        File.AppendAllText(S.FileName, HashTextBox.Text)
+                    End If
+                End Using
+            End If
+
+            'Copy the hash to clipboard
+            If CopyToClipboardCheckBox.Checked = True Then
+                Clipboard.SetText(HashTextBox.Text)
+            End If
+        Else
+            'Tell the user that only one item is allowed
+        End If
+    End Sub
+End Class

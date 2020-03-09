@@ -1,0 +1,35 @@
+# Visual Studio cache/options directory
+.vs/
+
+# Build results
+[Oo]bj
+[Oo]bj/*
+[Bb]in
+[Bb]in/*
+[Dd]ebug
+[Rr]elease
+
+# Compiled source
+*.exe
+*.dll
+
+# User-specific files
+*.user
+
+# NuGet Packages
+# //docs.microsoft.com/en-us/nuget/consume-packages/packages-and-source-control
+[Pp]ackages
+[Pp]ackages/*
+![Pp]ackages/build/
+src/MetroFramework.txt
+
+# Junk Files
+[Tt]humbs.db
+
+# Custom application assets/resources
+[Rr]es
+[Rr]esources
+*.ico
+!Icon_128.ico
+
+.release
