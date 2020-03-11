@@ -14,7 +14,7 @@ Public Class Form1
         Dim CmdArguments = New CommandLineParser(Of Arguments)().Parse(Environment.GetCommandLineArgs)
 
         If Not CmdArguments.HasErrors Then
-            PathTextBox.Text = (CmdArguments.Result.InputPath).Trim(""""c, "") 'Trim quotation marks
+            PathTextBox.Text = (CmdArguments.Result.InputPath).Trim(""""c) 'Trim quotation marks
             CopyToHashTxtCheckBox.Checked = CmdArguments.Result.ExportHash
             CopyToClipboardCheckBox.Checked = CmdArguments.Result.ClipboardCopy
         End If
