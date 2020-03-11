@@ -1,0 +1,32 @@
+---
+---
+
+/*! SuperBLT Hasher Stylesheet
+ * Copyright (c) 2020 Alberto Strappazzon
+ * Licensed under MIT https://github.com/Strappazzon/PD2-SuperBLT-Hasher/blob/master/LICENSE.txt
+*/
+
+/* Checkpoint Charlie Regular
+ * https://www.dafont.com/checkpoint-charlie.font
+*/
+@font-face {
+	font-family: 'Checkpoint_Charlie';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: local('Checkpoint_Charlie'), local('Checkpoint-Charlie'), local('Checkpoint Charlie'), url("{{ '/assets/webfonts/Checkpoint-Charlie.ttf' | relative_url }}") format('truetype');
+}
+
+body {
+	margin: 0;
+	display: grid;
+	place-items: center;
+	height: 100vh;
+	font-family: 'Checkpoint_Charlie', sans-serif;
+	font-size: 75px;
+	background-color: #292a2f;
+}
+
+a:link, a:hover, a:active, a:visited { color: #fd262e; text-decoration: none; outline: none; }
+
+@media (max-width: 768px) { a { font-size: 48px; } }

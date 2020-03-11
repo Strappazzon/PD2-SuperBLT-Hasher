@@ -1,0 +1,169 @@
+---
+layout: none
+title: "SuperBLT Hasher | VB.Net implementation of SuperBLT Hashing Library"
+description: "Visual Basic .Net implementation of the SuperBLT Hashing Library. Hashing of single files and folders is supported."
+---
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+	<title>{{ page.title }}</title>
+	<meta name="description" content="{{ page.description }}">
+	<meta name="keywords" content="superblt,superblt hash,superblt mod hash,superblt hashlib,hashlib,blt mod auto-updates,payday2,payday 2,payday 2 blt">
+	<meta name="author" content="Alberto Strappazzon">
+	<meta name="generator" content="Jekyll v{{ jekyll.version }}">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="theme-color" content="#538eca">
+	<meta name="referrer" content="no-referrer">
+	<meta property="og:title" content="{{ page.title }}">
+	<meta property="og:description" content="{{ page.description }}">
+	<meta property="og:site_name" content="SuperBLT Hasher">
+	<meta property="og:url" content="{{ site.baseurl | prepend: site.url }}">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="{{ site.baseurl | prepend: site.url }}/assets/img/ogimage.png">
+	<link rel="canonical" href="{{ site.baseurl | prepend: site.url }}{{ page.url | replace: 'index.html',''}}">
+	<link rel="icon" type="image/png" href="{{ '/assets/img/favicon.png' | relative_url }}">
+	<link rel="stylesheet" href="{{ '/assets/css/styles.css?v=1' | relative_url }}">
+</head>
+<body>
+<div class="container">
+	<div align="center">
+		<img class="img-responsive" src="{{ '/assets/img/favicon.png' | relative_url }}" width="128px" alt="SuperBLT Hasher Icon">
+		<h1 id="title">SuperBLT Hasher</h1>
+
+		<h4>VB.Net implementation of SuperBLT Hashing Library.</h4>
+
+		<p>
+		<a href="#about">About</a> •
+		<a href="#usage">Usage</a> •
+		<a href="#settings">Settings</a> •
+		<a href="#screenshot">Screenshot</a> •
+		<a href="#download">Download</a> •
+		<a href="#source-code">Source Code</a> •
+		<a href="#license">License</a>
+		</p>
+	</div>
+
+	<h2 id="about">About</h2>
+
+	<p>SuperBLT Hasher is a Visual Basic .Net implementation of the <a href="https://gitlab.com/SuperBLT/HashLib">SuperBLT Hashing Library</a>. Hashing of single files and folders is supported.</p>
+
+	<h2 id="usage">Usage</h2>
+
+	<h3 id="usage-gui">GUI</h3>
+
+	<ol>
+		<li>Launch <strong>SuperBLTHasher.exe</strong></li>
+		<li>Customize the settings by ticking\unticking the checkboxes.</li>
+		<li>Drag and drop a folder or file inside the dark area where it says "Drag a folder or file here".</li>
+	</ol>
+
+	<h3 id="usage-command-line">Command Line</h3>
+
+	<p>SuperBLT Hasher accepts the following command line arguments:</p>
+
+	<table>
+		<tr class="th">
+			<th align="left">Name</th>
+			<th align="left">Long Name</th>
+			<th align="left">Required?</th>
+			<th align="left">Description</th>
+		</tr>
+		<tr>
+			<td><code>-p</code></td>
+			<td><code>-path</code></td>
+			<td>Yes</td>
+			<td>
+				Path to folder or file you want to hash.
+				<br>
+				If the path contains spaces, quotation marks are <strong>required</strong>.
+			</td>
+		</tr>
+		<tr>
+			<td><code>-e</code></td>
+			<td><code>--export</code></td>
+			<td>No</td>
+			<td>If you include this argument, the program will ask you where you want to save the computed hash.</td>
+		</tr>
+		<tr>
+			<td><code>-c</code></td>
+			<td><code>--clipboard</code></td>
+			<td>No</td>
+			<td>If you include this argument, the program will copy the computed hash to the clipboard.</td>
+		</tr>
+	</table>
+
+	<h4>Example</h4>
+
+	<div class="codeblock">
+		<p>SuperBLTHasher -p <span class="highlight-string">"D:\Path\To My Mod\Folder"</span> -c</p>
+	</div>
+
+	<p>This command would compute the hash of the folder <code>D:\Path\To My Mod\Folder</code> and copy the computed hash to the clipboard.</p>
+
+	<h2 id="settings">Settings</h2>
+
+	<ul>
+		<li><strong>Write hash to file</strong></li>
+		<ul>
+			<li><em>Disabled by default</em></li>
+			<li>The program will ask you where you want to save the computed hash</li>
+		</ul>
+
+		<li><strong>Copy hash to clipboard</strong></li>
+		<ul>
+			<li><em>Disabled by default</em></li>
+			<li>The program will copy the computed hash to the clipboard</li>
+		</ul>
+
+		<li><strong>Check for updates</strong></li>
+		<ul>
+			<li><em>Disabled by default</em></li>
+			<li>The program will connect to GitHub servers to check if the current version is up to date</li>
+		</ul>
+	</ul>
+
+	<p>All settings are stored inside <code>%LOCALAPPDATA%\SuperBLTHasher</code></p>
+
+	<h2 id="screenshot">Screenshot</h2>
+
+	<img src="{{ '/assets/img/screenshot.png' | relative_url }}" alt="">
+
+	<h2 id="download">Download</h2>
+
+	<p>You can <a href="https://github.com/Strappazzon/PD2-SuperBLT-Hasher/releases/latest">download</a> the latest version of SuperBLT Hasher from the Releases page.</p>
+
+	<h2 id="source-code">Source Code</h2>
+
+	<p>The complete SuperBLT Hasher source code is available <a href="https://github.com/Strappazzon/PD2-SuperBLT-Hasher">on GitHub</a>.</p>
+
+	<h2 id="license">License</h2>
+
+	<p>By downloading and/or using SuperBLT Hasher, you are agreeing to the license terms.</p>
+
+	<div class="codeblock">
+	<p>Copyright (c) 2020 Alberto Strappazzon</p>
+
+	<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+	of this software and associated documentation files (the "Software"), to deal
+	in the Software without restriction, including without limitation the rights
+	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+	copies of the Software, and to permit persons to whom the Software is
+	furnished to do so, subject to the following conditions:</p>
+
+	<p>The above copyright notice and this permission notice shall be included in all
+	copies or substantial portions of the Software.</p>
+
+	<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+	SOFTWARE.</p>
+	</div>
+</div>
+</body>
+</html>

@@ -31,6 +31,18 @@ If you don't have any additional info/context to add but would like to indicate 
 * Please test (compile and run) your code before you submit changes. Untested code will **not** be merged!
 * Make sure your PR is up-to-date with the rest of the code.
 
+## Website Development
+
+SuperBLT Hasher website is inside `/docs`, so it’s easy to keep docs and code in sync.
+
+The website is built with [Jekyll](https://jekyllrb.com/), and automatically deployed onto GitHub Pages.
+
+Even though bundled in this repo, the website is regarded as a separate project.
+
+### Local Previews
+
+See [docs/README.md](https://github.com/Strappazzon/PD2-SuperBLT-Hasher/blob/master/docs/README.md).
+
 ## Git Commit Messages
 
 * Use the present tense ("Add feature" not "Added feature").
@@ -60,6 +72,9 @@ PD2-SuperBLT-Hasher/
  │   ├─ README.md            # Repository Readme file
  │   └─ ISSUE_TEMPLATE       # Issue templates
  │   
+ ├─ docs
+ │   ├─ _config.yml          # Jekyll configuration
+ │   └─ assets               # Website assets (images, CSS, ...)
  └─ src                      # SuperBLT Hasher source code
      └─ SuperBLTHasher.sln   # Visual Studio solution
 ```

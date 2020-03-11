@@ -1,0 +1,6 @@
+baseurl: "/PD2-SuperBLT-Hasher"
+sass:
+  sass_dir: assets/css
+  style: compressed
+exclude:
+  - README.md

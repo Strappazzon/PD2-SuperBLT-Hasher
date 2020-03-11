@@ -33,3 +33,6 @@ src/MetroFramework.txt
 !Icon_128.ico
 
 .release
+
+# Jekyll
+**/_site
