@@ -20,6 +20,7 @@
   <a href="#settings">Settings</a> •
   <a href="#screenshot">Screenshot</a> •
   <a href="#download">Download</a> •
+  <a href="#contributing">Contributing</a> •
   <a href="#license">License</a>
 </p>
 
@@ -105,6 +106,14 @@ All settings are stored inside `%LOCALAPPDATA%\SuperBLTHasher`.
 ## Download
 
 You can [download](https://github.com/Strappazzon/PD2-SuperBLT-Hasher/releases/latest) the latest version of SuperBLT Hasher from the Releases page.
+
+## Contributing
+
+If you are interested in fixing issues and contributing directly to the code base, please see:
+
+* [Building SuperBLT Hasher from its source code](https://github.com/Strappazzon/PD2-SuperBLT-Hasher/blob/master/BUILDING.md)
+* [Contribution Guidelines](./CONTRIBUTING.md)
+* [Code of Conduct](./CODE_OF_CONDUCT.md)
 
 ## License
 
