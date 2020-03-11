@@ -143,7 +143,8 @@ Partial Class Form1
         Me.CopyToHashTxtCheckBox.TabIndex = 8
         Me.CopyToHashTxtCheckBox.Text = "Write hash to file"
         Me.CopyToHashTxtCheckBox.Theme = MetroFramework.MetroThemeStyle.Dark
-        Me.ToolTips.SetToolTip(Me.CopyToHashTxtCheckBox, "Write the output hash to a text file. You'll be asked where to save the file.")
+        Me.ToolTips.SetToolTip(Me.CopyToHashTxtCheckBox, "Write the computed hash to a text file. You'll be asked where you want to save it" &
+        ".")
         Me.CopyToHashTxtCheckBox.UseStyleColors = True
         Me.CopyToHashTxtCheckBox.UseVisualStyleBackColor = True
         '
@@ -157,7 +158,7 @@ Partial Class Form1
         Me.UpdatesCheckBox.TabIndex = 9
         Me.UpdatesCheckBox.Text = "Check for updates"
         Me.UpdatesCheckBox.Theme = MetroFramework.MetroThemeStyle.Dark
-        Me.ToolTips.SetToolTip(Me.UpdatesCheckBox, "Check if the current version is up to date when you open SuperBLT Hasher.")
+        Me.ToolTips.SetToolTip(Me.UpdatesCheckBox, "Check if the current version is up to date next time you open SuperBLT Hasher.")
         Me.UpdatesCheckBox.UseStyleColors = True
         Me.UpdatesCheckBox.UseVisualStyleBackColor = True
         '
@@ -186,7 +187,7 @@ Partial Class Form1
         Me.CopyToClipboardCheckBox.TabIndex = 11
         Me.CopyToClipboardCheckBox.Text = "Copy hash to clipboard"
         Me.CopyToClipboardCheckBox.Theme = MetroFramework.MetroThemeStyle.Dark
-        Me.ToolTips.SetToolTip(Me.CopyToClipboardCheckBox, "Copy the output hash to the clipboard.")
+        Me.ToolTips.SetToolTip(Me.CopyToClipboardCheckBox, "Copy the computed hash to the clipboard.")
         Me.CopyToClipboardCheckBox.UseStyleColors = True
         Me.CopyToClipboardCheckBox.UseVisualStyleBackColor = True
         '
