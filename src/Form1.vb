@@ -123,7 +123,7 @@ Public Class Form1
                 Clipboard.SetText(HashTextBox.Text)
             End If
         Else
-            'Tell the user that only one item is allowed
+            MessageBox.Show("Please drop one folder or file at a time.", Text, MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
     End Sub
 End Class
