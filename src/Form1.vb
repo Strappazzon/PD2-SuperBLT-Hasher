@@ -1,9 +1,11 @@
-﻿Imports System.IO
+﻿Imports System.ComponentModel
+Imports System.IO
 Imports System.Net
 Imports ZNix.SuperBLT
 
 Public Class Form1
     Private Const VersionCode As Short = 1
+    Private WithEvents HashInput As New BackgroundWorker()
 
     Private Sub UpgradeSettings()
         'Migrate settings to the new version
@@ -15,20 +17,24 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub HashInput(Path As String)
+    Private Sub HashInput_DoWork(sender As Object, e As DoWorkEventArgs) Handles HashInput.DoWork
         'Check whether the dropped item is a folder or a file
         '//stackoverflow.com/a/439478
-        Dim IsDir As Boolean = (File.GetAttributes(Path) And FileAttributes.Directory) = FileAttributes.Directory
+        Dim IsDir As Boolean = (File.GetAttributes(PathTextBox.Text) And FileAttributes.Directory) = FileAttributes.Directory
 
         If IsDir = True Then
             'Hash the selected folder
-            Dim Hash As String = Hasher.HashDirectory(Path)
-            HashTextBox.Text = Hash
+            Dim Hash As String = Hasher.HashDirectory(PathTextBox.Text)
+            e.Result = Hash
         Else
             'Hash the selected file
-            Dim Hash As String = Hasher.HashFile(Path)
-            HashTextBox.Text = Hash
+            Dim Hash As String = Hasher.HashFile(PathTextBox.Text)
+            e.Result = Hash
         End If
+    End Sub
+
+    Private Sub HashInput_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles HashInput.RunWorkerCompleted
+        HashTextBox.Text = e.Result()
     End Sub
 
     Private Sub Updater_DownloadStringCompleted(ByVal sender As Object, ByVal e As DownloadStringCompletedEventArgs)
@@ -96,7 +102,8 @@ Public Class Form1
             PathTextBox.Text = DroppedItems.First
 
             'Hash the input
-            HashInput(PathTextBox.Text)
+            HashTextBox.Text = "Computing..."
+            HashInput.RunWorkerAsync()
 
             'Write the hash to a text file
             If CopyToHashTxtCheckBox.Checked = True Then
