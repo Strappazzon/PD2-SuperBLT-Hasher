@@ -40,19 +40,24 @@ Public Class Form1
     End Sub
 
     Private Sub HashInput_DoWork(sender As Object, e As DoWorkEventArgs) Handles HashInput.DoWork
-        'Check whether the specified/dropped path is a folder or a file
-        '//stackoverflow.com/a/439478
-        Dim IsDir As Boolean = (File.GetAttributes(PathTextBox.Text) And FileAttributes.Directory) = FileAttributes.Directory
+        Try
+            'Check whether the specified/dropped path is a folder or a file
+            '//stackoverflow.com/a/439478
+            Dim IsDir As Boolean = (File.GetAttributes(PathTextBox.Text) And FileAttributes.Directory) = FileAttributes.Directory
 
-        If IsDir = True Then
-            'Hash the selected folder
-            Dim Hash As String = Hasher.HashDirectory(PathTextBox.Text)
-            e.Result = Hash
-        Else
-            'Hash the selected file
-            Dim Hash As String = Hasher.HashFile(PathTextBox.Text)
-            e.Result = Hash
-        End If
+            If IsDir = True Then
+                'Hash the selected folder
+                Dim Hash As String = Hasher.HashDirectory(PathTextBox.Text)
+                e.Result = Hash
+            Else
+                'Hash the selected file
+                Dim Hash As String = Hasher.HashFile(PathTextBox.Text)
+                e.Result = Hash
+            End If
+        Catch ex As Exception
+            e.Result = "Error"
+            MessageBox.Show("An error occurred while attempting to compute the hash: " & ex.Message(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 
     Private Sub HashInput_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles HashInput.RunWorkerCompleted
@@ -60,7 +65,7 @@ Public Class Form1
         HashTextBox.Text = e.Result()
 
         'Write the hash to a text file
-        If CopyToHashTxtCheckBox.Checked = True Then
+        If e.Result <> "Error" AndAlso CopyToHashTxtCheckBox.Checked = True Then
             Using S As New SaveFileDialog
                 S.Title = "Save hash as..."
                 S.InitialDirectory = PathTextBox.Text
@@ -73,7 +78,7 @@ Public Class Form1
         End If
 
         'Copy the hash to clipboard
-        If CopyToClipboardCheckBox.Checked = True Then
+        If e.Result <> "Error" AndAlso CopyToClipboardCheckBox.Checked = True Then
             Clipboard.SetText(e.Result())
         End If
     End Sub
