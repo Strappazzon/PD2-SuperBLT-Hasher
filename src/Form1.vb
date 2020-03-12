@@ -21,11 +21,11 @@ Public Class Form1
 
         If CmdArguments.HelpRequested Then
             MessageBox.Show("Usage: " & Path.GetFileName(Application.ExecutablePath).Replace(".exe", "") & " [options]" & Environment.NewLine & Environment.NewLine &
-                                "-p, --path         Path to folder or file you want to hash." & Environment.NewLine &
-                                "-e, --export       Write computed hash to a text file." & Environment.NewLine &
-                                "-c, --clipboard  Copy computed hash to the clipboard." & Environment.NewLine & Environment.NewLine &
-                                "Please consult the Readme file for more information.",
-                                Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            "-p, --path         Path to folder or file you want to hash." & Environment.NewLine &
+                            "-e, --export       Write computed hash to a text file." & Environment.NewLine &
+                            "-c, --clipboard  Copy computed hash to the clipboard." & Environment.NewLine & Environment.NewLine &
+                            "Please consult the Readme file for more information.",
+                            Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
 
