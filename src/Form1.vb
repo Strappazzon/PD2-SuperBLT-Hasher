@@ -89,7 +89,10 @@ Public Class Form1
 
             'Compare downloaded SuperBLT Hasher version number with the current one
             If FetchedVer > VersionCode Then
-                MessageBox.Show("A newer version of SuperBLT Hasher is available. Do you want to visit the download page now?", "Update available", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
+                Dim result = MessageBox.Show("A newer version of SuperBLT Hasher is available. Do you want to visit the download page now?", "Update available", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
+                If result = DialogResult.Yes Then
+                    Process.Start("https://github.com/Strappazzon/PD2-SuperBLT-Hasher/releases/latest")
+                End If
             End If
         End If
     End Sub
