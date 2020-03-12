@@ -5,7 +5,7 @@ Imports MatthiWare.CommandLine
 Imports ZNix.SuperBLT
 
 Public Class Form1
-    Private Const VersionCode As Short = 1
+    Private Const VersionCode As Short = 2
     Private WithEvents HashInput As New BackgroundWorker()
 
     Private Sub ParseCmdArgs()

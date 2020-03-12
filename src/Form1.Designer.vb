@@ -172,7 +172,7 @@ Partial Class Form1
         Me.AboutLabel.Name = "AboutLabel"
         Me.AboutLabel.Size = New System.Drawing.Size(256, 60)
         Me.AboutLabel.TabIndex = 10
-        Me.AboutLabel.Text = "SuperBLT Hasher v1.0.0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Copyright (c) 2020 Alberto Strappazzon" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "This software is " &
+        Me.AboutLabel.Text = "SuperBLT Hasher v1.0.1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Copyright (c) 2020 Alberto Strappazzon" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "This software is " &
     "licensed under the MIT license" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & """Drop Shipping"" icon by Icons8 https://icons8.co" &
     "m"
         Me.AboutLabel.Theme = MetroFramework.MetroThemeStyle.Dark
