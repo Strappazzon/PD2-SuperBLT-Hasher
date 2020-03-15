@@ -11,21 +11,17 @@ Public Class Form1
     Private Sub ParseCmdArgs()
         'Parse command line arguments
         '//www.youtube.com/watch?v=mObWcaigMTU
-        Dim CmdArguments = New CommandLineParser(Of Arguments)().Parse(Environment.GetCommandLineArgs)
+        Dim Parser = New CommandLineParser(Of Arguments)()
+
+        'Decorate the printer so it can show the usages using a messagebox
+        Parser.Printer = New MessageBoxUsagePrinterDecorator(Parser.Printer, Text)
+
+        Dim CmdArguments = Parser.Parse(Environment.GetCommandLineArgs)
 
         If Not CmdArguments.HasErrors Then
             PathTextBox.Text = (CmdArguments.Result.InputPath).Trim(""""c) 'Trim quotation marks
             CopyToHashTxtCheckBox.Checked = CmdArguments.Result.ExportHash
             CopyToClipboardCheckBox.Checked = CmdArguments.Result.ClipboardCopy
-        End If
-
-        If CmdArguments.HelpRequested Then
-            MessageBox.Show("Usage: " & Path.GetFileName(Application.ExecutablePath).Replace(".exe", "") & " [options]" & Environment.NewLine & Environment.NewLine &
-                            "-p, --path         Path to folder or file you want to hash." & Environment.NewLine &
-                            "-e, --export       Write computed hash to a text file." & Environment.NewLine &
-                            "-c, --clipboard  Copy computed hash to the clipboard." & Environment.NewLine & Environment.NewLine &
-                            "Please consult the Readme file for more information.",
-                            Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
 
