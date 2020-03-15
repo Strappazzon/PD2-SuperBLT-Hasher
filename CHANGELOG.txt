@@ -1,5 +1,9 @@
+1.0.2
+ - Minor improvements
+
 1.0.1
  - Fix: GitHub Releases page not opening after clicking "Yes" on the update dialog
  - Exceptions thrown while attempting to compute a hash will be handled
+
 1.0.0
  - First release
