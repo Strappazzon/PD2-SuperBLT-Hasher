@@ -11,7 +11,7 @@ Public Class MessageBoxUsagePrinterDecorator
 
     Public Sub New(printer As IUsagePrinter, text As String)
         If printer Is Nothing Then
-            Throw New ArgumentNullException(NameOf(printer))
+            Throw New ArgumentNullException(printer.ToString())
         End If
 
         Me.printer = printer
