@@ -107,7 +107,10 @@ Public Class Form1
         UpdatesCheckBox.Checked = My.Settings.CheckUpdates
 
         'Parse command line arguments
-        ParseCmdArgs()
+        'Only if the user starts SuperBLT Hasher via the command line
+        If (Environment.GetCommandLineArgs).Length > 1 Then
+            ParseCmdArgs()
+        End If
 
         'Check for updates
         If UpdatesCheckBox.Checked = True Then
