@@ -153,6 +153,7 @@
   <ItemGroup>
     <Content Include="Icon_128.ico" />
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\drop_64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

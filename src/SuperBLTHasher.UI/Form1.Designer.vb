@@ -22,7 +22,6 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.PathTextBox = New MetroFramework.Controls.MetroTextBox()
         Me.DragDropPanel = New MetroFramework.Controls.MetroPanel()
         Me.DragDropPicture = New System.Windows.Forms.PictureBox()
@@ -75,7 +74,7 @@ Partial Class Form1
         '
         'DragDropPicture
         '
-        Me.DragDropPicture.Image = CType(resources.GetObject("DragDropPicture.Image"), System.Drawing.Image)
+        Me.DragDropPicture.Image = Global.SuperBLTHasher.My.Resources.Resources.Drop_Icon
         Me.DragDropPicture.Location = New System.Drawing.Point(218, 25)
         Me.DragDropPicture.Name = "DragDropPicture"
         Me.DragDropPicture.Size = New System.Drawing.Size(64, 64)

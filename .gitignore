@@ -27,8 +27,10 @@
 **/[Tt]humbs.db
 
 # Custom application assets/resources
-**/[Rr]es
-**/[Rr]esources
+!**/[Rr]es
+**/[Rr]es/[Iicon]*.*
+!**/[Rr]esources
+**/[Rr]esources/[Iicon]*.*
 **/*.ico
 **/!Icon_256.ico
 
