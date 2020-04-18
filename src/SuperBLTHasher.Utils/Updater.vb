@@ -39,7 +39,7 @@ Public Class Updater
                     Updater.DefaultRequestHeaders.Add("User-Agent", "SuperBLT Hasher (+https://strappazzon.xyz/PD2-SuperBLT-Hasher)")
                     Dim FetchedVer As Integer = Integer.Parse(Await Updater.GetStringAsync(VersionURI))
 
-                    'Compare downloaded GHOST Buster version number with the current one
+                    'Compare downloaded SuperBLT hasher version number with the current one
                     If FetchedVer > VersionCode Then
                         Dim result = MessageBox.Show("A newer version of SuperBLT Hasher is available. Do you want to visit the download page now?", "Update available", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
                         If result = DialogResult.Yes Then
