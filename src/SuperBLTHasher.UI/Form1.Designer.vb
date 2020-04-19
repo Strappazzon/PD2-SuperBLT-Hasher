@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
-    Inherits System.Windows.Forms.Form
+    Inherits MetroFramework.Forms.MetroForm
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.PathTextBox = New MetroFramework.Controls.MetroTextBox()
         Me.DragDropPanel = New MetroFramework.Controls.MetroPanel()
         Me.DragDropPicture = New System.Windows.Forms.PictureBox()
@@ -43,7 +44,7 @@ Partial Class Form1
         Me.PathTextBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(23, Byte), Integer), CType(CType(23, Byte), Integer))
         Me.PathTextBox.CustomBackground = True
         Me.PathTextBox.FontSize = MetroFramework.MetroTextBoxSize.Medium
-        Me.PathTextBox.Location = New System.Drawing.Point(16, 45)
+        Me.PathTextBox.Location = New System.Drawing.Point(16, 90)
         Me.PathTextBox.Name = "PathTextBox"
         Me.PathTextBox.ReadOnly = True
         Me.PathTextBox.Size = New System.Drawing.Size(500, 25)
@@ -54,7 +55,7 @@ Partial Class Form1
         'DragDropPanel
         '
         Me.DragDropPanel.AllowDrop = True
-        Me.DragDropPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(23, Byte), Integer), CType(CType(23, Byte), Integer))
+        Me.DragDropPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.DragDropPanel.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle
         Me.DragDropPanel.Controls.Add(Me.DragDropPicture)
         Me.DragDropPanel.Controls.Add(Me.DragDropHelpLabel)
@@ -62,7 +63,7 @@ Partial Class Form1
         Me.DragDropPanel.HorizontalScrollbarBarColor = True
         Me.DragDropPanel.HorizontalScrollbarHighlightOnWheel = False
         Me.DragDropPanel.HorizontalScrollbarSize = 10
-        Me.DragDropPanel.Location = New System.Drawing.Point(16, 145)
+        Me.DragDropPanel.Location = New System.Drawing.Point(16, 190)
         Me.DragDropPanel.Name = "DragDropPanel"
         Me.DragDropPanel.Size = New System.Drawing.Size(500, 150)
         Me.DragDropPanel.TabIndex = 7
@@ -85,7 +86,7 @@ Partial Class Form1
         'DragDropHelpLabel
         '
         Me.DragDropHelpLabel.AutoSize = True
-        Me.DragDropHelpLabel.BackColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(23, Byte), Integer), CType(CType(23, Byte), Integer))
+        Me.DragDropHelpLabel.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.DragDropHelpLabel.CustomBackground = True
         Me.DragDropHelpLabel.Location = New System.Drawing.Point(166, 100)
         Me.DragDropHelpLabel.Name = "DragDropHelpLabel"
@@ -100,7 +101,7 @@ Partial Class Form1
         Me.HashTextBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(23, Byte), Integer), CType(CType(23, Byte), Integer))
         Me.HashTextBox.CustomBackground = True
         Me.HashTextBox.FontSize = MetroFramework.MetroTextBoxSize.Medium
-        Me.HashTextBox.Location = New System.Drawing.Point(16, 105)
+        Me.HashTextBox.Location = New System.Drawing.Point(16, 150)
         Me.HashTextBox.Name = "HashTextBox"
         Me.HashTextBox.ReadOnly = True
         Me.HashTextBox.Size = New System.Drawing.Size(500, 25)
@@ -111,9 +112,8 @@ Partial Class Form1
         'PathLabel
         '
         Me.PathLabel.AutoSize = True
-        Me.PathLabel.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.PathLabel.CustomBackground = True
-        Me.PathLabel.Location = New System.Drawing.Point(12, 20)
+        Me.PathLabel.Location = New System.Drawing.Point(12, 65)
         Me.PathLabel.Name = "PathLabel"
         Me.PathLabel.Size = New System.Drawing.Size(34, 19)
         Me.PathLabel.TabIndex = 0
@@ -123,9 +123,8 @@ Partial Class Form1
         'HashLabel
         '
         Me.HashLabel.AutoSize = True
-        Me.HashLabel.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.HashLabel.CustomBackground = True
-        Me.HashLabel.Location = New System.Drawing.Point(12, 80)
+        Me.HashLabel.Location = New System.Drawing.Point(12, 125)
         Me.HashLabel.Name = "HashLabel"
         Me.HashLabel.Size = New System.Drawing.Size(37, 19)
         Me.HashLabel.TabIndex = 2
@@ -136,7 +135,7 @@ Partial Class Form1
         '
         Me.CopyToHashTxtCheckBox.AutoSize = True
         Me.CopyToHashTxtCheckBox.CustomBackground = True
-        Me.CopyToHashTxtCheckBox.Location = New System.Drawing.Point(20, 310)
+        Me.CopyToHashTxtCheckBox.Location = New System.Drawing.Point(20, 355)
         Me.CopyToHashTxtCheckBox.Name = "CopyToHashTxtCheckBox"
         Me.CopyToHashTxtCheckBox.Size = New System.Drawing.Size(112, 15)
         Me.CopyToHashTxtCheckBox.TabIndex = 8
@@ -151,7 +150,7 @@ Partial Class Form1
         '
         Me.UpdatesCheckBox.AutoSize = True
         Me.UpdatesCheckBox.CustomBackground = True
-        Me.UpdatesCheckBox.Location = New System.Drawing.Point(20, 350)
+        Me.UpdatesCheckBox.Location = New System.Drawing.Point(20, 395)
         Me.UpdatesCheckBox.Name = "UpdatesCheckBox"
         Me.UpdatesCheckBox.Size = New System.Drawing.Size(119, 15)
         Me.UpdatesCheckBox.TabIndex = 9
@@ -164,10 +163,9 @@ Partial Class Form1
         'AboutLabel
         '
         Me.AboutLabel.AutoSize = True
-        Me.AboutLabel.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.AboutLabel.CustomBackground = True
         Me.AboutLabel.FontSize = MetroFramework.MetroLabelSize.Small
-        Me.AboutLabel.Location = New System.Drawing.Point(262, 305)
+        Me.AboutLabel.Location = New System.Drawing.Point(260, 350)
         Me.AboutLabel.Name = "AboutLabel"
         Me.AboutLabel.Size = New System.Drawing.Size(256, 60)
         Me.AboutLabel.TabIndex = 10
@@ -180,7 +178,7 @@ Partial Class Form1
         '
         Me.CopyToClipboardCheckBox.AutoSize = True
         Me.CopyToClipboardCheckBox.CustomBackground = True
-        Me.CopyToClipboardCheckBox.Location = New System.Drawing.Point(20, 330)
+        Me.CopyToClipboardCheckBox.Location = New System.Drawing.Point(20, 375)
         Me.CopyToClipboardCheckBox.Name = "CopyToClipboardCheckBox"
         Me.CopyToClipboardCheckBox.Size = New System.Drawing.Size(146, 15)
         Me.CopyToClipboardCheckBox.TabIndex = 11
@@ -201,8 +199,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(34, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(536, 386)
+        Me.ClientSize = New System.Drawing.Size(535, 430)
         Me.Controls.Add(Me.CopyToClipboardCheckBox)
         Me.Controls.Add(Me.AboutLabel)
         Me.Controls.Add(Me.UpdatesCheckBox)
@@ -213,12 +210,13 @@ Partial Class Form1
         Me.Controls.Add(Me.DragDropPanel)
         Me.Controls.Add(Me.PathTextBox)
         Me.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Form1"
-        Me.ShowIcon = False
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
+        Me.Style = MetroFramework.MetroColorStyle.Blue
         Me.Text = "SuperBLT Hasher"
+        Me.Theme = MetroFramework.MetroThemeStyle.Dark
         Me.DragDropPanel.ResumeLayout(False)
         Me.DragDropPanel.PerformLayout()
         CType(Me.DragDropPicture, System.ComponentModel.ISupportInitialize).EndInit()

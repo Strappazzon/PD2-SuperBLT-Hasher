@@ -24,7 +24,10 @@
 ''
 #End Region
 
+Imports MetroFramework.Forms
+
 Public Class Form1
+    Inherits MetroForm
 
 #Region "Draw Events"
     Private Sub ToolTips_Draw(sender As Object, e As DrawToolTipEventArgs) Handles ToolTips.Draw
