@@ -27,7 +27,7 @@
 Imports System.Net.Http
 
 Public Class Updater
-    Private Shared ReadOnly VersionCode As Integer = 3
+    Private Shared ReadOnly VersionCode As Integer = 4
     Private Shared ReadOnly VersionURI As Uri = New Uri("https://raw.githubusercontent.com/Strappazzon/PD2-SuperBLT-Hasher/master/version")
 
     'Check for updates
