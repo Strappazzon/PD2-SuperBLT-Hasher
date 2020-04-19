@@ -30,6 +30,7 @@ Imports ZNix.SuperBLT
 
 Public Class Hash
     Private Shared WithEvents AsyncHasher As BackgroundWorker = New BackgroundWorker()
+    Private Shared Property ErrorMessage As String = Nothing
 
     Public Shared Sub HashInput(ByVal inputPath As String)
         AsyncHasher.RunWorkerAsync(inputPath)
@@ -51,16 +52,15 @@ Public Class Hash
                 e.Result = Hash
             End If
         Catch ex As Exception
-            e.Result = "Error"
-            MessageBox.Show("An error occurred while attempting to compute the hash: " & ex.Message(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            ErrorMessage = ex.Message()
         End Try
     End Sub
 
     Private Shared Sub AsyncHasher_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles AsyncHasher.RunWorkerCompleted
-        'Write the result
-        Form1.HashTextBox.Text = e.Result()
+        If ErrorMessage = Nothing Then
+            'Write the result
+            Form1.HashTextBox.Text = e.Result()
 
-        If e.Result <> "Error" Then
             'Write the hash to a text file
             If Form1.CopyToHashTxtCheckBox.Checked = True Then
                 Using S As SaveFileDialog = New SaveFileDialog() With {
@@ -79,6 +79,10 @@ Public Class Hash
             If Form1.CopyToClipboardCheckBox.Checked = True Then
                 Clipboard.SetText(e.Result())
             End If
+        Else
+            Form1.HashTextBox.Text = "Error."
+            MessageBox.Show("An error occurred while attempting to compute the hash: " & ErrorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            ErrorMessage = Nothing
         End If
     End Sub
 #End Region
