@@ -24,14 +24,77 @@
 ''
 #End Region
 
+Imports System.IO
+Imports IniParser
+Imports IniParser.Model
+
 Public Class Settings
-    Public Shared Sub Upgrade()
-        'Migrate settings to the new version
-        'Unfortunately, settings migrate only if the new version is installed in the same directory as the old version
-        '//bytes.com/topic/visual-basic-net/answers/854235-my-settings-upgrade-doesnt-upgrade#post3426232
-        If My.Settings.MustUpgrade = True Then
-            My.Settings.Upgrade()
-            My.Settings.MustUpgrade = False
+    Private Shared ReadOnly SettingsFile As String = Directory.GetParent(Path.GetFileName(Application.ExecutablePath)).ToString() & "\user.cfg"
+    Private Shared Config As IniData
+    Private Shared ConfigData As IniData
+    Private Shared ReadOnly ConfigParser As FileIniDataParser = New FileIniDataParser()
+
+    Public Shared Sub Init()
+        If Not File.Exists(SettingsFile) Then
+            'Create default settings
+            Config = New IniData()
+            Config("config")("export") = "False"
+            Config("config")("clipboard") = "False"
+            Config("config")("checkupdates") = "False"
+
+            'Write default settings to file
+            File.WriteAllText(SettingsFile, Config.ToString())
+        Else
+            'Load settings
+            Form1.CopyToHashTxtCheckBox.Checked = SaveToFile()
+            Form1.CopyToClipboardCheckBox.Checked = CopyToClipboard()
+            Form1.UpdatesCheckBox.Checked = CheckForUpdates()
         End If
     End Sub
+
+    Public Shared Sub Save()
+        'Save settings
+
+        'Get settings
+        Config = New IniData()
+        Config("config")("export") = Form1.CopyToHashTxtCheckBox.Checked
+        Config("config")("clipboard") = Form1.CopyToClipboardCheckBox.Checked
+        Config("config")("checkupdates") = Form1.UpdatesCheckBox.Checked
+
+        'Write settings to file
+        File.WriteAllText(SettingsFile, Config.ToString())
+    End Sub
+
+    Private Shared Function SaveToFile() As Boolean
+        ConfigData = ConfigParser.ReadFile(SettingsFile)
+
+        Dim Value As String = ConfigData("config")("export")
+        If Value <> Nothing Then
+            Return Boolean.Parse(Value)
+        Else
+            Return False
+        End If
+    End Function
+
+    Private Shared Function CopyToClipboard() As Boolean
+        ConfigData = ConfigParser.ReadFile(SettingsFile)
+
+        Dim Value As String = ConfigData("config")("clipboard")
+        If Value <> Nothing Then
+            Return Boolean.Parse(Value)
+        Else
+            Return False
+        End If
+    End Function
+
+    Private Shared Function CheckForUpdates() As Boolean
+        ConfigData = ConfigParser.ReadFile(SettingsFile)
+
+        Dim Value As String = ConfigData("config")("checkupdates")
+        If Value <> Nothing Then
+            Return Boolean.Parse(Value)
+        Else
+            Return False
+        End If
+    End Function
 End Class

@@ -42,9 +42,7 @@ Public Class Form1
 #Region "Form events"
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Load settings
-        CopyToHashTxtCheckBox.Checked = My.Settings.WriteHashToFile
-        CopyToClipboardCheckBox.Checked = My.Settings.CopyHashToClipboard
-        UpdatesCheckBox.Checked = My.Settings.CheckUpdates
+        Settings.Init()
 
         'Check for updates
         Updater.CheckUpdates()
@@ -63,9 +61,7 @@ Public Class Form1
 
     Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         'Save settings
-        My.Settings.WriteHashToFile = CopyToHashTxtCheckBox.CheckState
-        My.Settings.CopyHashToClipboard = CopyToClipboardCheckBox.CheckState
-        My.Settings.CheckUpdates = UpdatesCheckBox.CheckState
+        Settings.Save()
     End Sub
 #End Region
 
