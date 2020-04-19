@@ -4,9 +4,9 @@ This file should assist you in compiling and running SuperBLT Hasher.
 
 ## Building requirements
 
-* [.NET Framework 4.6.1 or newer](https://dotnet.microsoft.com/download/dotnet-framework).
-* Visual Studio. You can [download the community edition](https://visualstudio.microsoft.com/vs/community/) for free.
-  * The ".NET desktop development" Workload is required.
+* [.NET Framework 4.7.2 Runtime or newer](https://dotnet.microsoft.com/download/dotnet-framework)
+* Visual Studio. You can [download the community edition](https://visualstudio.microsoft.com/vs/community/) for free
+  * The ".NET desktop development" Workload is required
 
 ## Getting the source code
 
@@ -22,7 +22,7 @@ Alternatively, you can clone the repository via any Git client, or download a zi
 ## Getting HashLib
 
 1. Navigate to the HashLib [GitLab repository](https://gitlab.com/SuperBLT/HashLib).
-2. Open the `c#` folder and [download the archive](https://gitlab.com/SuperBLT/HashLib/-/archive/master/HashLib-master.zip?path=c%23) of this directory.
+2. Open the `c#` folder and [download the directory archive](https://gitlab.com/SuperBLT/HashLib/-/archive/master/HashLib-master.zip?path=c%23).
 3. Extract the downloaded archive.
 
 ## Building with Visual Studio
