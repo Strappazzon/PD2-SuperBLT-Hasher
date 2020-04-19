@@ -97,7 +97,7 @@ This command would compute the hash of the folder `D:\Path\To My Mod\Folder` and
   * _Disabled by default_
   * The program will connect to GitHub servers to check if the current version is up to date
 
-All settings are stored inside `%LOCALAPPDATA%\SuperBLTHasher`.
+All settings are stored inside a `user.cfg` file, in the same directory as SuperBLT Hasher.
 
 ## Screenshot
 
