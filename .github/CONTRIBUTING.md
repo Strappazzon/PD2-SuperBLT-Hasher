@@ -75,10 +75,6 @@ PD2-SuperBLT-Hasher/
  ├─ .vscode                  # Visual Studio Code-related files
  │   └─ tasks.json           # Visual Studio Code tasks
  │   
- ├─ script                   # Scripts
- │   ├─ build.bat            # Build SuperBLT Hasher from source
- │   └─ jekyll-serve.bat     # Preview the website locally
- │   
  ├─ docs
  │   ├─ _config.yml          # Jekyll configuration
  │   └─ assets               # Website assets (images, CSS, ...)
