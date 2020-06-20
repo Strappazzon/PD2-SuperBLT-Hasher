@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="https://strappazzon.xyz/PD2-SuperBLT-Hasher/assets/img/favicon.png" width="128px" alt="SuperBLT Hasher Icon">
+  <img src="https://strappazzon.github.io/PD2-SuperBLT-Hasher/static/img/favicon.png" width="128px" alt="">
   <br>
   SuperBLT Hasher
   <br>
@@ -9,9 +9,15 @@
 <h4 align="center">VB.Net implementation of SuperBLT Hashing Library.</h4>
 
 <p align="center">
-  <a href="https://strappazzon.xyz/PD2-SuperBLT-Hasher"><img alt="HTML Version" src="https://img.shields.io/badge/HTML%20Version-%23ff5f2f?style=flat-square&logo=HTML5&logoColor=%23ffffff"></a>
-  <a href="https://github.com/Strappazzon/PD2-SuperBLT-Hasher/releases"><img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/Strappazzon/PD2-SuperBLT-Hasher/total?color=%231e72a5&label=Downloads&logo=DocuSign&logoColor=%23ffffff&style=flat-square"></a>
-  <a href="https://github.com/Strappazzon/PD2-SuperBLT-Hasher/releases/latest"><img alt="Latest Release" src="https://img.shields.io/github/v/release/Strappazzon/PD2-SuperBLT-Hasher?color=%23008080&include_prereleases&label=Latest%20Release&style=flat-square"></a>
+  <a href="https://strappazzon.xyz/PD2-SuperBLT-Hasher">
+    <img alt="HTML Version" src="https://img.shields.io/badge/HTML%20Version-%23ff5f2f?style=flat-square&logo=HTML5&logoColor=%23ffffff">
+  </a>
+  <a href="https://github.com/Strappazzon/PD2-SuperBLT-Hasher/releases">
+    <img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/Strappazzon/PD2-SuperBLT-Hasher/total?color=%231e72a5&label=Downloads&logo=DocuSign&logoColor=%23ffffff&style=flat-square">
+  </a>
+  <a href="https://github.com/Strappazzon/PD2-SuperBLT-Hasher/releases/latest">
+    <img alt="Latest Release" src="https://img.shields.io/github/v/release/Strappazzon/PD2-SuperBLT-Hasher?color=%23008080&include_prereleases&label=Latest%20Release&style=flat-square">
+  </a>
 </p>
 
 <p align="center">
@@ -40,40 +46,11 @@ SuperBLT Hasher is a Visual Basic .Net implementation of the [SuperBLT Hashing L
 
 SuperBLT Hasher accepts the following command line arguments:
 
-<table>
-  <tr>
-    <th align="left">Name</th>
-    <th align="left">Long Name</th>
-    <th align="left">Required?</th>
-    <th align="left">Description</th>
-  </tr>
-  <tr>
-    <td><code>-p</code></td>
-    <td><code>-path</code></td>
-    <td>Yes</td>
-    <td>
-      Path to folder or file you want to hash.
-      <br>
-      If the path contains spaces, quotation marks are <strong>required</strong>.
-    </td>
-  </tr>
-  <tr>
-    <td><code>-e</code></td>
-    <td><code>--export</code></td>
-    <td>No</td>
-    <td>
-      If you include this argument, the program will ask you where you want to save the computed hash.
-    </td>
-  </tr>
-  <tr>
-    <td><code>-c</code></td>
-    <td><code>--clipboard</code></td>
-    <td>No</td>
-    <td>
-      If you include this argument, the program will copy the computed hash to the clipboard.
-    </td>
-  </tr>
-</table>
+| Name | Long Name     | Required? | Description                                                                                                  |
+|------|---------------|-----------|--------------------------------------------------------------------------------------------------------------|
+| `-p` | `--path`      | Yes       | Path to folder or file you want to hash. <br> If the path contains spaces, quotation marks are **required**. |
+| `-e` | `--export`    | No        | If you include this argument, the program will ask you where you want to save the computed hash.             |
+| `-c` | `--clipboard` | No        | If you include this argument, the program will copy the computed hash to the clipboard.                      |
 
 #### Example
 
@@ -101,7 +78,7 @@ All settings are stored inside a `user.cfg` file, in the same directory as Super
 
 ## Screenshot
 
-<img src="https://strappazzon.xyz/PD2-SuperBLT-Hasher/assets/img/screenshot.png" alt="SuperBLT Hasher Screenshot">
+<img src="https://strappazzon.github.io/PD2-SuperBLT-Hasher/static/img/screenshot.png" alt="SuperBLT Hasher Screenshot">
 
 ## Download
 
