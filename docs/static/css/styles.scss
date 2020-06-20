@@ -1,0 +1,171 @@
+---
+---
+
+/*! SuperBLT Hasher Stylesheet
+ * Copyright (c) 2020 Alberto Strappazzon
+ * Licensed under MIT https://github.com/Strappazzon/PD2-SuperBLT-Hasher/blob/master/LICENSE.txt
+*/
+
+/* Fjalla One Regular
+ * https://fonts.google.com/specimen/Fjalla+One
+*/
+@font-face {
+	font-family: "Fjalla One";
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+	src: url("{{ '/static/webfonts/FjallaOne-Regular.woff2' | relative_url }}") format("woff2");
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	background-color: #0b0b15;
+	color: #fff;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: normal;
+	font-size: 15px;
+	text-rendering: optimizeLegibility;
+}
+
+body {
+	margin: 25px 0 25px 0;
+	text-align: left;
+}
+
+.container {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+a:link,
+a:visited {
+	color: #538eca;
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover:not([href$="screenshot.png"]) {
+	color: #3aa5e6;
+	text-decoration: none;
+	border-bottom: 1px solid #3aa5e6;
+}
+
+a:active {
+	color: #3aa5e6;
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+	font-family: "Fjalla One", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+}
+
+ol {
+	line-height: 2;
+}
+
+ul {
+	& {
+		list-style: square;
+		line-height: 2;
+	}
+	& > li > ul {
+		list-style: circle;
+		line-height: 2.3;
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	border-style: none;
+}
+
+code {
+	color: #ccc;
+	background-color: rgba(27, 34, 44, 0.7);
+	border: 1px solid #344864;
+	border-radius: 3px;
+	margin: 0;
+	padding: 3px 5px;
+	word-break: break-all;
+}
+
+blockquote {
+	& {
+		margin: 0;
+		font-family: "Lucida Console", "Courier New", monospace;
+		color: #ccc;
+		background-color: rgba(27, 34, 44, 0.7);
+		border: 3px solid #344864;
+	}
+	& p {
+		margin: 0;
+		padding: 10px;
+	}
+}
+
+table {
+	& {
+		background-color: #344864;
+		background: linear-gradient(177deg, #344864 0%, #2e3c52 30%, #202328 50%, #1c1c1c 100%);
+		border-collapse: collapse;
+	}
+	tbody {
+		& {
+			display: table-row-group;
+			vertical-align: middle;
+		}
+		& > tr {
+			background-color: #1b222c;
+		}
+	}
+	tr {
+		display: table-row;
+		vertical-align: inherit;
+	}
+	th {
+		display: table-cell;
+		vertical-align: middle;
+		font-weight: bold;
+		text-align: left;
+	}
+	td {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	& > thead > tr > th {
+		padding: 5px 10px;
+	}
+	& > tbody > tr > td {
+		padding: 7px 10px;
+	}
+	code {
+		padding: 1px 5px;
+	}
+}
+
+// ---------- CODE HIGHLIGHTING ---------- //
+
+.h-s {
+	color: #32cd32;
+}
+
+// ---------- MEDIA QUERIES ---------- //
+
+@media (min-width: 576px) { .container { max-width: 540px; } }
+@media (min-width: 768px) { .container { max-width: 720px; } }
+@media (min-width: 992px) { .container { max-width: 960px; } }
+@media (min-width: 1200px) { .container { max-width: 1140px; } }
+@media (min-width: 1600px) { .container { max-width: 1350px; } }

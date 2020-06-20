@@ -1,6 +1,15 @@
 baseurl: "/PD2-SuperBLT-Hasher"
+
+# Markdown
+markdown: kramdown
+kramdown:
+  html_to_native: true
+
+# CSS
 sass:
-  sass_dir: assets/css
+  sass_dir: "static/css"
   style: compressed
+
+# Excluded files
 exclude:
   - README.md
