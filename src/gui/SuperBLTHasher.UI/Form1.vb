@@ -42,22 +42,13 @@ Public Class Form1
     End Sub
 #End Region
 
-#Region "Form events"
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Load settings
-        Settings.Init()
-
-        'Check for updates
-        Updater.CheckUpdates()
-    End Sub
-
-    Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        'Save settings
-        Settings.Save()
-    End Sub
-#End Region
-
 #Region "Controls"
+    Private Sub CopyBtn_Click(sender As Object, e As EventArgs) Handles CopyBtn.Click
+        If Not HashTextBox.Text = "Error." Then
+            Clipboard.SetText(HashTextBox.Text)
+        End If
+    End Sub
+
     Private Sub DragDropPanel_DragEnter(sender As Object, e As DragEventArgs) Handles DragDropPanel.DragEnter
         'Accept only files and folders
         '//stackoverflow.com/a/11686880
@@ -80,6 +71,10 @@ Public Class Form1
         Else
             MessageBox.Show("Please drop one folder or file at a time.", Text, MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
+    End Sub
+
+    Private Sub UpdateBtn_Click(sender As Object, e As EventArgs) Handles UpdateBtn.Click
+        Updater.CheckUpdates()
     End Sub
 #End Region
 End Class

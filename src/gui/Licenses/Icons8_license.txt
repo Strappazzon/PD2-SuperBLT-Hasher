@@ -2,4 +2,6 @@ Icons8
 https://icons8.com/
 https://icons8.com/license
 
-- Drop Shipping (drop_64.png) https://icons8.com/icons/set/drop
+- Available Updates (update.png) https://icons8.com/icon/set/update/windows--white
+- Drop Shipping (drop_64.png) https://icons8.com/icon/set/drop/windows--white
+- Inspection (copy.png) https://icons8.com/icon/set/clipboard/windows--white

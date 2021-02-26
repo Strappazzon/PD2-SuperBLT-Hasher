@@ -25,16 +25,15 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.PathTextBox = New MetroFramework.Controls.MetroTextBox()
         Me.DragDropPanel = New MetroFramework.Controls.MetroPanel()
-        Me.DragDropPicture = New System.Windows.Forms.PictureBox()
         Me.DragDropHelpLabel = New MetroFramework.Controls.MetroLabel()
         Me.HashTextBox = New MetroFramework.Controls.MetroTextBox()
         Me.PathLabel = New MetroFramework.Controls.MetroLabel()
         Me.HashLabel = New MetroFramework.Controls.MetroLabel()
-        Me.CopyToHashTxtCheckBox = New MetroFramework.Controls.MetroCheckBox()
-        Me.UpdatesCheckBox = New MetroFramework.Controls.MetroCheckBox()
         Me.AboutLabel = New MetroFramework.Controls.MetroLabel()
-        Me.CopyToClipboardCheckBox = New MetroFramework.Controls.MetroCheckBox()
         Me.ToolTips = New MetroFramework.Components.MetroToolTip()
+        Me.CopyBtn = New System.Windows.Forms.Button()
+        Me.UpdateBtn = New System.Windows.Forms.Button()
+        Me.DragDropPicture = New System.Windows.Forms.PictureBox()
         Me.DragDropPanel.SuspendLayout()
         CType(Me.DragDropPicture, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -73,16 +72,6 @@ Partial Class Form1
         Me.DragDropPanel.VerticalScrollbarHighlightOnWheel = False
         Me.DragDropPanel.VerticalScrollbarSize = 10
         '
-        'DragDropPicture
-        '
-        Me.DragDropPicture.Image = Global.SuperBLTHasher.My.Resources.Resources.Drop_Icon
-        Me.DragDropPicture.Location = New System.Drawing.Point(218, 25)
-        Me.DragDropPicture.Name = "DragDropPicture"
-        Me.DragDropPicture.Size = New System.Drawing.Size(64, 64)
-        Me.DragDropPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.DragDropPicture.TabIndex = 3
-        Me.DragDropPicture.TabStop = False
-        '
         'DragDropHelpLabel
         '
         Me.DragDropHelpLabel.AutoSize = True
@@ -104,7 +93,7 @@ Partial Class Form1
         Me.HashTextBox.Location = New System.Drawing.Point(16, 150)
         Me.HashTextBox.Name = "HashTextBox"
         Me.HashTextBox.ReadOnly = True
-        Me.HashTextBox.Size = New System.Drawing.Size(500, 25)
+        Me.HashTextBox.Size = New System.Drawing.Size(469, 25)
         Me.HashTextBox.TabIndex = 3
         Me.HashTextBox.Theme = MetroFramework.MetroThemeStyle.Dark
         Me.HashTextBox.UseStyleColors = True
@@ -131,62 +120,17 @@ Partial Class Form1
         Me.HashLabel.Text = "Hash"
         Me.HashLabel.Theme = MetroFramework.MetroThemeStyle.Dark
         '
-        'CopyToHashTxtCheckBox
-        '
-        Me.CopyToHashTxtCheckBox.AutoSize = True
-        Me.CopyToHashTxtCheckBox.CustomBackground = True
-        Me.CopyToHashTxtCheckBox.Location = New System.Drawing.Point(20, 355)
-        Me.CopyToHashTxtCheckBox.Name = "CopyToHashTxtCheckBox"
-        Me.CopyToHashTxtCheckBox.Size = New System.Drawing.Size(112, 15)
-        Me.CopyToHashTxtCheckBox.TabIndex = 8
-        Me.CopyToHashTxtCheckBox.Text = "Write hash to file"
-        Me.CopyToHashTxtCheckBox.Theme = MetroFramework.MetroThemeStyle.Dark
-        Me.ToolTips.SetToolTip(Me.CopyToHashTxtCheckBox, "Write the computed hash to a text file. You'll be asked where you want to save it" &
-        ".")
-        Me.CopyToHashTxtCheckBox.UseStyleColors = True
-        Me.CopyToHashTxtCheckBox.UseVisualStyleBackColor = True
-        '
-        'UpdatesCheckBox
-        '
-        Me.UpdatesCheckBox.AutoSize = True
-        Me.UpdatesCheckBox.CustomBackground = True
-        Me.UpdatesCheckBox.Location = New System.Drawing.Point(20, 395)
-        Me.UpdatesCheckBox.Name = "UpdatesCheckBox"
-        Me.UpdatesCheckBox.Size = New System.Drawing.Size(119, 15)
-        Me.UpdatesCheckBox.TabIndex = 9
-        Me.UpdatesCheckBox.Text = "Check for updates"
-        Me.UpdatesCheckBox.Theme = MetroFramework.MetroThemeStyle.Dark
-        Me.ToolTips.SetToolTip(Me.UpdatesCheckBox, "Check if the current version is up to date next time you open SuperBLT Hasher.")
-        Me.UpdatesCheckBox.UseStyleColors = True
-        Me.UpdatesCheckBox.UseVisualStyleBackColor = True
-        '
         'AboutLabel
         '
         Me.AboutLabel.AutoSize = True
         Me.AboutLabel.CustomBackground = True
         Me.AboutLabel.FontSize = MetroFramework.MetroLabelSize.Small
-        Me.AboutLabel.Location = New System.Drawing.Point(260, 350)
+        Me.AboutLabel.Location = New System.Drawing.Point(18, 362)
         Me.AboutLabel.Name = "AboutLabel"
-        Me.AboutLabel.Size = New System.Drawing.Size(256, 60)
+        Me.AboutLabel.Size = New System.Drawing.Size(34, 15)
         Me.AboutLabel.TabIndex = 10
-        Me.AboutLabel.Text = "SuperBLT Hasher v2.1.0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Copyright (c) 2020 - 2021 Alberto Strappazzon" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "This softw" &
-    "are is licensed under the MIT license" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & """Drop Shipping"" icon by Icons8 https://ic" &
-    "ons8.com"
+        Me.AboutLabel.Text = "v2.1.0"
         Me.AboutLabel.Theme = MetroFramework.MetroThemeStyle.Dark
-        '
-        'CopyToClipboardCheckBox
-        '
-        Me.CopyToClipboardCheckBox.AutoSize = True
-        Me.CopyToClipboardCheckBox.CustomBackground = True
-        Me.CopyToClipboardCheckBox.Location = New System.Drawing.Point(20, 375)
-        Me.CopyToClipboardCheckBox.Name = "CopyToClipboardCheckBox"
-        Me.CopyToClipboardCheckBox.Size = New System.Drawing.Size(146, 15)
-        Me.CopyToClipboardCheckBox.TabIndex = 11
-        Me.CopyToClipboardCheckBox.Text = "Copy hash to clipboard"
-        Me.CopyToClipboardCheckBox.Theme = MetroFramework.MetroThemeStyle.Dark
-        Me.ToolTips.SetToolTip(Me.CopyToClipboardCheckBox, "Copy the computed hash to the clipboard.")
-        Me.CopyToClipboardCheckBox.UseStyleColors = True
-        Me.CopyToClipboardCheckBox.UseVisualStyleBackColor = True
         '
         'ToolTips
         '
@@ -195,15 +139,54 @@ Partial Class Form1
         Me.ToolTips.ReshowDelay = 100
         Me.ToolTips.Theme = MetroFramework.MetroThemeStyle.Dark
         '
+        'CopyBtn
+        '
+        Me.CopyBtn.BackgroundImage = Global.SuperBLTHasher.My.Resources.Resources.Clipboard_Icon
+        Me.CopyBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.CopyBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
+        Me.CopyBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(1, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(7, Byte), Integer))
+        Me.CopyBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(2, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.CopyBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CopyBtn.Location = New System.Drawing.Point(491, 150)
+        Me.CopyBtn.Name = "CopyBtn"
+        Me.CopyBtn.Size = New System.Drawing.Size(25, 25)
+        Me.CopyBtn.TabIndex = 12
+        Me.ToolTips.SetToolTip(Me.CopyBtn, "Copy hash to clipboard.")
+        Me.CopyBtn.UseVisualStyleBackColor = True
+        '
+        'UpdateBtn
+        '
+        Me.UpdateBtn.BackgroundImage = Global.SuperBLTHasher.My.Resources.Resources.Update_Icon
+        Me.UpdateBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.UpdateBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
+        Me.UpdateBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(1, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(7, Byte), Integer))
+        Me.UpdateBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(2, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.UpdateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.UpdateBtn.Location = New System.Drawing.Point(485, 355)
+        Me.UpdateBtn.Name = "UpdateBtn"
+        Me.UpdateBtn.Size = New System.Drawing.Size(26, 26)
+        Me.UpdateBtn.TabIndex = 11
+        Me.ToolTips.SetToolTip(Me.UpdateBtn, "Check for updates.")
+        Me.UpdateBtn.UseVisualStyleBackColor = True
+        '
+        'DragDropPicture
+        '
+        Me.DragDropPicture.Image = Global.SuperBLTHasher.My.Resources.Resources.Drop_Icon
+        Me.DragDropPicture.Location = New System.Drawing.Point(218, 25)
+        Me.DragDropPicture.Name = "DragDropPicture"
+        Me.DragDropPicture.Size = New System.Drawing.Size(64, 64)
+        Me.DragDropPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.DragDropPicture.TabIndex = 3
+        Me.DragDropPicture.TabStop = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(535, 430)
-        Me.Controls.Add(Me.CopyToClipboardCheckBox)
+        Me.ClientSize = New System.Drawing.Size(535, 395)
+        Me.Controls.Add(Me.CopyBtn)
+        Me.Controls.Add(Me.UpdateBtn)
         Me.Controls.Add(Me.AboutLabel)
-        Me.Controls.Add(Me.UpdatesCheckBox)
-        Me.Controls.Add(Me.CopyToHashTxtCheckBox)
         Me.Controls.Add(Me.HashLabel)
         Me.Controls.Add(Me.PathLabel)
         Me.Controls.Add(Me.HashTextBox)
@@ -231,9 +214,8 @@ Partial Class Form1
     Friend WithEvents HashTextBox As MetroFramework.Controls.MetroTextBox
     Friend WithEvents PathLabel As MetroFramework.Controls.MetroLabel
     Friend WithEvents HashLabel As MetroFramework.Controls.MetroLabel
-    Friend WithEvents CopyToHashTxtCheckBox As MetroFramework.Controls.MetroCheckBox
-    Friend WithEvents UpdatesCheckBox As MetroFramework.Controls.MetroCheckBox
     Friend WithEvents AboutLabel As MetroFramework.Controls.MetroLabel
-    Friend WithEvents CopyToClipboardCheckBox As MetroFramework.Controls.MetroCheckBox
     Friend WithEvents ToolTips As MetroFramework.Components.MetroToolTip
+    Friend WithEvents UpdateBtn As Button
+    Friend WithEvents CopyBtn As Button
 End Class

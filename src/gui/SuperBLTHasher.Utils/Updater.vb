@@ -33,23 +33,23 @@ Public Class Updater
     'Check for updates
     '//docs.microsoft.com/en-us/dotnet/api/system.net.http.httpclient
     Public Shared Async Sub CheckUpdates()
-        If Form1.UpdatesCheckBox.Checked = True Then
-            Try
-                Using Updater As HttpClient = New HttpClient()
-                    Updater.DefaultRequestHeaders.Add("User-Agent", "SuperBLT Hasher (+https://strappazzon.xyz/PD2-SuperBLT-Hasher)")
-                    Dim FetchedVer As Integer = Integer.Parse(Await Updater.GetStringAsync(VersionURI))
+        Try
+            Using Updater As HttpClient = New HttpClient()
+                Updater.DefaultRequestHeaders.Add("User-Agent", "SuperBLT Hasher (+https://strappazzon.xyz/PD2-SuperBLT-Hasher)")
+                Dim FetchedVer As Integer = Integer.Parse(Await Updater.GetStringAsync(VersionURI))
 
-                    'Compare downloaded SuperBLT hasher version number with the current one
-                    If FetchedVer > VersionCode Then
-                        Dim result = MessageBox.Show("A newer version of SuperBLT Hasher is available. Do you want to visit the download page now?", "Update available", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
-                        If result = DialogResult.Yes Then
-                            Process.Start("https://github.com/Strappazzon/PD2-SuperBLT-Hasher/releases/latest")
-                        End If
+                'Compare downloaded SuperBLT hasher version number with the current one
+                If FetchedVer > VersionCode Then
+                    Dim result = MessageBox.Show("A newer version of SuperBLT Hasher is available. Do you want to visit the download page now?", "Update available", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
+                    If result = DialogResult.Yes Then
+                        Process.Start("https://github.com/Strappazzon/PD2-SuperBLT-Hasher/releases/latest")
                     End If
-                End Using
-            Catch ex As Exception
-                MessageBox.Show("An error occurred while checking for updates: " & ex.Message(), Form1.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End Try
-        End If
+                Else
+                    MessageBox.Show("SuperBLT Hasher is up to date.", "No update available", MessageBoxButtons.OK)
+                End If
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("An error occurred while checking for updates: " & ex.Message(), Form1.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 End Class

@@ -58,27 +58,7 @@ Public Class Hash
 
     Private Shared Sub AsyncHasher_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles AsyncHasher.RunWorkerCompleted
         If ErrorMessage = Nothing Then
-            'Write the result
             Form1.HashTextBox.Text = e.Result()
-
-            'Write the hash to a text file
-            If Form1.CopyToHashTxtCheckBox.Checked = True Then
-                Using S As SaveFileDialog = New SaveFileDialog() With {
-                    .FileName = "hash",
-                    .Filter = "Text file|.txt",
-                    .InitialDirectory = Form1.PathTextBox.Text,
-                    .Title = "Save hash as..."
-                }
-                    If S.ShowDialog = DialogResult.OK Then
-                        File.AppendAllText(S.FileName, e.Result())
-                    End If
-                End Using
-            End If
-
-            'Copy the hash to clipboard
-            If Form1.CopyToClipboardCheckBox.Checked = True Then
-                Clipboard.SetText(e.Result())
-            End If
         Else
             Form1.HashTextBox.Text = "Error."
             MessageBox.Show("An error occurred while attempting to compute the hash: " & ErrorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
