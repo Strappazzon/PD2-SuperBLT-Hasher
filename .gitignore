@@ -27,14 +27,6 @@
 **/[Dd]esktop.ini
 **/[Tt]humbs.db
 
-# Custom application assets/resources
-!**/[Rr]es
-**/[Rr]es/[Iicon]*.*
-!**/[Rr]esources
-**/[Rr]esources/[Iicon]*.*
-**/*.ico
-!**/Icon_128.ico
-
 /.release
 
 # Jekyll
