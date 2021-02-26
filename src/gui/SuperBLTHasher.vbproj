@@ -51,9 +51,6 @@
     <ApplicationIcon>Icon_128.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CommandLineParser, Version=0.3.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\MatthiWare.CommandLineParser.0.3.0\lib\netstandard2.0\CommandLineParser.dll</HintPath>
-    </Reference>
     <Reference Include="HashLib">
       <HintPath>.\HashLib.dll</HintPath>
       <Private>True</Private>
@@ -100,9 +97,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SuperBLTHasher.CommandLine\Arguments.vb" />
-    <Compile Include="SuperBLTHasher.CommandLine\MessageBoxUsagePrinterDecorator.vb" />
-    <Compile Include="SuperBLTHasher.CommandLine\Parser.vb" />
     <Compile Include="SuperBLTHasher.Utils\Hash.vb" />
     <Compile Include="SuperBLTHasher.Utils\Settings.vb" />
     <Compile Include="SuperBLTHasher.UI\Form1.vb">

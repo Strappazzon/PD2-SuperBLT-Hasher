@@ -24,6 +24,7 @@
 **/MetroFramework.txt
 
 # Junk Files
+**/[Dd]esktop.ini
 **/[Tt]humbs.db
 
 # Custom application assets/resources
@@ -32,7 +33,7 @@
 !**/[Rr]esources
 **/[Rr]esources/[Iicon]*.*
 **/*.ico
-**/!Icon_256.ico
+!**/Icon_128.ico
 
 /.release
 

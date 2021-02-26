@@ -1,4 +1,4 @@
-﻿#Region "Copyright (c) 2019 - 2020 Alberto Strappazzon, https://strappazzon.xyz/PD2-SuperBLT-Hasher"
+﻿#Region "Copyright (c) 2019 - 2021 Alberto Strappazzon, https://strappazzon.xyz/PD2-SuperBLT-Hasher"
 ''
 '' SuperBLT Hasher - VB.Net implementation of SuperBLT Hashing Library
 ''

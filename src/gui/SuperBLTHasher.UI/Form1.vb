@@ -1,4 +1,4 @@
-﻿#Region "Copyright (c) 2019 - 2020 Alberto Strappazzon, https://strappazzon.xyz/PD2-SuperBLT-Hasher"
+﻿#Region "Copyright (c) 2019 - 2021 Alberto Strappazzon, https://strappazzon.xyz/PD2-SuperBLT-Hasher"
 ''
 '' SuperBLT Hasher - VB.Net implementation of SuperBLT Hashing Library
 ''
@@ -49,17 +49,6 @@ Public Class Form1
 
         'Check for updates
         Updater.CheckUpdates()
-
-        'Parse command line arguments
-        If Environment.GetCommandLineArgs.Length > 1 Then
-            Parser.ParseArguments()
-        End If
-
-        'Hash the input from command line argument
-        If PathTextBox.Text <> "" Then
-            HashTextBox.Text = "Computing..."
-            Hash.HashInput(PathTextBox.Text)
-        End If
     End Sub
 
     Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing

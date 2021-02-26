@@ -1,4 +1,4 @@
-﻿#Region "Copyright (c) 2019 - 2020 Alberto Strappazzon, https://strappazzon.xyz/PD2-SuperBLT-Hasher"
+﻿#Region "Copyright (c) 2019 - 2021 Alberto Strappazzon, https://strappazzon.xyz/PD2-SuperBLT-Hasher"
 ''
 '' SuperBLT Hasher - VB.Net implementation of SuperBLT Hashing Library
 ''
@@ -27,7 +27,7 @@
 Imports System.Net.Http
 
 Public Class Updater
-    Private Shared ReadOnly VersionCode As Integer = 4
+    Private Shared ReadOnly VersionCode As Integer = 5
     Private Shared ReadOnly VersionURI As Uri = New Uri("https://raw.githubusercontent.com/Strappazzon/PD2-SuperBLT-Hasher/master/version")
 
     'Check for updates
