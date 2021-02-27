@@ -6,11 +6,12 @@ if (-not (Test-Path -Path ".\.release")) {
 }
 
 # Copy compiled binaries and other files inside the release folder
-if ((Test-Path -LiteralPath ".\src\cli\bin\Release\netcoreapp3.1\SuperBLTHasherCLI.exe") -And (Test-Path -LiteralPath ".\src\gui\bin\Release\SuperBLTHasher.exe")) {
+if ((Test-Path -LiteralPath ".\src\cli\bin\Release\SuperBLTHasherCLI.exe") -And (Test-Path -LiteralPath ".\src\gui\bin\Release\SuperBLTHasher.exe")) {
 	Write-Host "Copying compiled binaries and other files."
-	Copy-Item -LiteralPath ".\src\cli\bin\Release\netcoreapp3.1\SuperBLTHasherCLI.exe" -Destination ".\.release\superblthasher-cli.exe" -Force
+	Copy-Item -LiteralPath ".\src\cli\bin\Release\SuperBLTHasherCLI.exe" -Destination ".\.release\superblthasher-cli.exe" -Force
 	Copy-Item -LiteralPath ".\src\gui\bin\Release\SuperBLTHasher.exe" -Destination ".\.release\SuperBLT Hasher.exe" -Force
-	Copy-Item -LiteralPath ".\src\cli\HashLib.dll" -Destination ".\.release\HashLib.dll" -Force
+	Copy-Item -LiteralPath ".\src\gui\HashLib.dll" -Destination ".\.release\HashLib.dll" -Force
+	Copy-Item -LiteralPath ".\src\gui\bin\Release\MetroFramework.dll" -Destination ".\.release\MetroFramework.dll" -Force
 	Copy-Item -Path ".\src\Licenses" -Destination ".\.release\" -Recurse -Force
 	Copy-Item -LiteralPath ".\CHANGELOG.txt" -Destination ".\.release\CHANGELOG.txt" -Force
 

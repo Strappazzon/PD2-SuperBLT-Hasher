@@ -36,4 +36,4 @@ Alternatively, you can clone the repository via any Git client, or download a zi
 6. Compile SuperBLT Hasher using **Build** -> **Build Solution**.
    * The compiled binary will be inside the `.\src\gui\bin\Debug` folder.
 7. Repeat from step 5 but with `SuperBLTHasherCLI.sln`.
-   * The compiled binary will be inside the `.\src\cli\bin\Debug\netcoreapp3.1` folder.
+   * The compiled binary will be inside the `.\src\cli\bin\Debug` folder.
