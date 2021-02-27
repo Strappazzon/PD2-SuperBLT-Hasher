@@ -23,14 +23,22 @@
 !**/[Pp]ackages/build/
 **/MetroFramework.txt
 
-# Junk Files
+# Junk Files (Windows)
 **/[Dd]esktop.ini
 **/[Tt]humbs.db
 
 /.release
 
+# Ruby
+**/Gemfile.lock
+
+# Bundler
+**/.bundle/
+**/vendor/
+**/lib/bundler/man/
+
 # Jekyll
-**/_site/
+**/_site*/
 **/.sass-cache/
 **/.jekyll-cache/
 **/.jekyll-metadata
