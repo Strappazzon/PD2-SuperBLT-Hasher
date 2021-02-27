@@ -4,7 +4,7 @@
 		{
 			"label": "Compile SuperBLT Hasher",
 			"type": "shell",
-			"command": "\"${env:WinDir}\\Microsoft.NET\\Framework\\v4.0.30319\\msbuild.exe\" \".\\src\\SuperBLTHasher.sln\" /t:Build /p:Configuration=Release",
+			"command": "${workspaceFolder}\"\\script\\build.ps1\"",
 			"group": "build",
 			"presentation": {
 				"focus": true,
@@ -12,9 +12,49 @@
 			}
 		},
 		{
+			"label": "Release SuperBLT Hasher",
+			"type": "shell",
+			"command": "${workspaceFolder}\"\\script\\release.ps1\"",
+			"group": "none",
+			"presentation": {
+				"focus": true,
+				"panel": "new"
+			}
+		},
+		{
+			"label": "Docs: Install Dependencies",
+			"type": "shell",
+			"command": "$HOME/gems/bin/bundle install --path vendor/bundle --gemfile \"./docs/Gemfile\"",
+			"options": {
+				"shell": {
+					"executable": "bash.exe",
+					"args": [
+						"-c"
+					]
+				}
+			},
+			"presentation": {
+				"reveal": "silent",
+				"revealProblems": "onProblem",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": false
+			}
+		},
+		{
 			"label": "Build Website",
 			"type": "shell",
-			"command": "jekyll build -s \"./docs/\" -d \"./docs/_site/\"",
+			"command": "BUNDLE_GEMFILE=\"docs/Gemfile\" $HOME/gems/bin/bundle exec jekyll build -s \"./docs\" -d \"./docs/_site/\" --config \"docs/_config.yml\"",
+			"options": {
+				"shell": {
+					"executable": "bash.exe",
+					"args": [
+						"-c"
+					]
+				}
+			},
+			"dependsOrder": "sequence",
+			"dependsOn": "Docs: Install Dependencies",
 			"group": "build",
 			"presentation": {
 				"reveal": "always",
@@ -24,8 +64,18 @@
 		{
 			"label": "Serve Website",
 			"type": "shell",
-			"command": "jekyll serve -s \"./docs/\" -d \"./docs/_site/\"",
-			"group": "test",
+			"command": "BUNDLE_GEMFILE=\"docs/Gemfile\" $HOME/gems/bin/bundle exec jekyll serve -s \"./docs\" -d \"./docs/_site/\" --config \"docs/_config.yml\" --force_polling --livereload",
+			"options": {
+				"shell": {
+					"executable": "bash.exe",
+					"args": [
+						"-c"
+					]
+				}
+			},
+			"dependsOrder": "sequence",
+			"dependsOn": "Docs: Install Dependencies",
+			"group": "build",
 			"presentation": {
 				"reveal": "always",
 				"panel": "dedicated"
