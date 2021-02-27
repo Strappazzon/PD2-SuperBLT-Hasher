@@ -11,7 +11,7 @@ if ((Test-Path -LiteralPath ".\src\cli\bin\Release\netcoreapp3.1\SuperBLTHasherC
 	Copy-Item -LiteralPath ".\src\cli\bin\Release\netcoreapp3.1\SuperBLTHasherCLI.exe" -Destination ".\.release\superblthasher-cli.exe" -Force
 	Copy-Item -LiteralPath ".\src\gui\bin\Release\SuperBLTHasher.exe" -Destination ".\.release\SuperBLT Hasher.exe" -Force
 	Copy-Item -LiteralPath ".\src\cli\HashLib.dll" -Destination ".\.release\HashLib.dll" -Force
-	Copy-Item -Path ".\src\gui\Licenses" -Destination ".\.release\" -Recurse -Force
+	Copy-Item -Path ".\src\Licenses" -Destination ".\.release\" -Recurse -Force
 	Copy-Item -LiteralPath ".\CHANGELOG.txt" -Destination ".\.release\CHANGELOG.txt" -Force
 
 	# Create release archive
