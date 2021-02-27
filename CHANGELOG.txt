@@ -1,3 +1,8 @@
+2.1.0
+ - Decoupled GUI and CLI
+ - Removed settings
+ - Added buttons to manually check for updates and copy the hash to clipboard
+
 2.0.0
  - Enhancement: Settings will be saved on a configuration file and will no longer be lost when moving/renaming SuperBLT Hasher executable
     - You will have to configure SuperBLT Hasher settings again when migrating from 1.x.x versions to 2.x.x versions
