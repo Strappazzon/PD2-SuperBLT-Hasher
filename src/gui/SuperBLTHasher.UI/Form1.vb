@@ -1,8 +1,8 @@
-﻿#Region "Copyright (c) 2019 - 2021 Alberto Strappazzon, https://strappazzon.xyz/PD2-SuperBLT-Hasher"
+﻿#Region "Copyright (c) 2020 - 2021 Alberto Strappazzon, https://strappazzon.xyz/PD2-SuperBLT-Hasher"
 ''
-'' SuperBLT Hasher - VB.Net implementation of SuperBLT Hashing Library
+'' SuperBLT Hasher - Generate hashes for PAYDAY 2 mods
 ''
-'' Copyright (c) 2020 Alberto Strappazzon, https://strappazzon.xyz/PD2-SuperBLT-Hasher
+'' Copyright (c) 2020 - 2021 Alberto Strappazzon, https://strappazzon.xyz/PD2-SuperBLT-Hasher
 ''
 '' Permission is hereby granted, free of charge, to any person obtaining a copy
 '' of this software and associated documentation files (the "Software"), to deal

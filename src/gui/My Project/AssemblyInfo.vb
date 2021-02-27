@@ -9,10 +9,10 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("SuperBLT Hasher")>
-<Assembly: AssemblyDescription("VB.Net implementation of SuperBLT Hashing Library.")>
+<Assembly: AssemblyDescription("Generate hashes for PAYDAY 2 mods")>
 <Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("SuperBLT Hasher")>
-<Assembly: AssemblyCopyright("Copyright © 2020 Alberto Strappazzon")>
+<Assembly: AssemblyCopyright("Copyright (c) 2020 - 2021 Alberto Strappazzon")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
