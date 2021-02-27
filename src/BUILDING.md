@@ -31,7 +31,9 @@ Alternatively, you can clone the repository via any Git client, or download a zi
 2. Select **Open a project or solution** and open the `HashLib.sln` solution file.
 3. Compile HashLib using **Build** -> **Build Solution**.
    * The compiled DLL will be inside the `.\HashLib\bin\Debug` folder
-4. Copy the DLL where `SuperBLTHasher.sln` is (In this case: `.\PD2-SuperBLT-Hasher\src\SuperBLTHasher.sln`).
-5. Close the HashLib solution and open the `SuperBLTHasher.sln` solution file located in your cloned repository (In this case: `.\PD2-SuperBLT-Hasher\src\SuperBLTHasher.sln`).
+4. Copy the DLL where `SuperBLTHasher.sln` and `SuperBLTHasherCLI.sln` are (In this case: `.\PD2-SuperBLT-Hasher\src\cli` and `.\PD2-SuperBLT-Hasher\src\gui`).
+5. Close the HashLib solution and open the `SuperBLTHasher.sln` solution file located in your cloned repository.
 6. Compile SuperBLT Hasher using **Build** -> **Build Solution**.
-   * The compiled binary will be inside the `.\src\bin\Debug` folder.
+   * The compiled binary will be inside the `.\src\gui\bin\Debug` folder.
+7. Repeat from step 5 but with `SuperBLTHasherCLI.sln`.
+   * The compiled binary will be inside the `.\src\cli\bin\Debug\netcoreapp3.1` folder.
