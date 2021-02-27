@@ -12,7 +12,7 @@ This project and everyone participating in it is governed by the [SuperBLT Hashe
 * Check whether your issue/feature is already fixed/implemented.
 * Check if the issue still exists in the latest release.
 * Issues in languages other than English will be closed and ignored.
-* If you are a Visual Basic .Net developer, you are always welcome to fix/implement an issue/feature yourself. PRs are welcome!
+* If you are a Visual Basic .Net/C# developer, you are always welcome to fix/implement an issue/feature yourself. PRs are welcome!
 * Add one issue at a time. Do not put multiple issues into one thread.
 * When reporting a bug please describe the steps which reproduce the problem.
 * When reporting a crash include the stack trace from SuperBLT Hasher (click the "**▼ Details**" button in the crash window). Include the stack trace in the issue in a [file attachment](https://help.github.com/en/github/managing-your-work-on-github/file-attachments-on-issues-and-pull-requests), or put it in a [PrivateBin](https://privatebin.net/) and provide the link to that paste.
@@ -39,10 +39,6 @@ The website is built with [Jekyll](https://jekyllrb.com/), and automatically dep
 
 Even though bundled in this repo, the website is regarded as a separate project.
 
-### Local Previews
-
-See [docs/README.md](https://github.com/Strappazzon/PD2-SuperBLT-Hasher/blob/master/docs/README.md).
-
 ## Git Commit Messages
 
 * Use the present tense ("Add feature" not "Added feature").
@@ -60,11 +56,10 @@ By contributing to this repository, you agree to license your work under the cur
 
 This is a brief description on how the repository files and folders are structured and what each one contains. It only contains the most relevant files and folders as most of them are brief and self-explanatory.
 
-```sh
+```bash
 PD2-SuperBLT-Hasher/
  ├─ .gitignore               # Ignored files, directories and paths
- ├─ BUILDING.md              # Building instructions
- ├─ version                  # File used by SuperBLT Hasher updater
+ ├─ version                  # File used by SuperBLT Hasher GUI updater
  │   
  ├─ .github                  # GitHub files
  │   ├─ CODE_OF_CONDUCT.md   # Code of Conduct
@@ -73,12 +68,16 @@ PD2-SuperBLT-Hasher/
  │   └─ ISSUE_TEMPLATE       # Issue templates
  │   
  ├─ .vscode                  # Visual Studio Code-related files
- │   └─ tasks.json           # Visual Studio Code tasks
+ │   ├─ settings.json        # VSCode workspace settings
+ │   └─ tasks.json           # VSCode tasks
  │   
  ├─ docs
  │   ├─ _config.yml          # Jekyll configuration
- │   └─ assets               # Website assets (images, CSS, ...)
+ │   ├─ Gemfile              # Ruby gems
+ │   └─ static               # Website assets (images, CSS, ...)
  │   
  └─ src                      # SuperBLT Hasher source code
-     └─ SuperBLTHasher.sln   # Visual Studio solution
+     ├─ BUILDING.md          # Building instructions
+     ├─ cli                  # Command Line Interface source code
+     └─ gui                  # SuperBLT Hasher source code
 ```
