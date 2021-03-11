@@ -63,7 +63,7 @@ You can [download](https://github.com/Strappazzon/PD2-SuperBLT-Hasher/releases/l
 
 If you are interested in fixing issues and contributing directly to the code base, please see:
 
-* [Building SuperBLT Hasher from its source code](https://github.com/Strappazzon/PD2-SuperBLT-Hasher/blob/master/BUILDING.md)
+* [Building SuperBLT Hasher from its source code](https://github.com/Strappazzon/PD2-SuperBLT-Hasher/blob/master/src/BUILDING.md)
 * [Contribution Guidelines](./CONTRIBUTING.md)
 * [Code of Conduct](./CODE_OF_CONDUCT.md)
 
