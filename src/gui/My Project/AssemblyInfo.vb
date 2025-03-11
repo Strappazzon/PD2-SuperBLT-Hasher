@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Generate hashes for PAYDAY 2 mods")>
 <Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("SuperBLT Hasher")>
-<Assembly: AssemblyCopyright("Copyright (c) 2020 - 2021 Alberto Strappazzon")>
+<Assembly: AssemblyCopyright("Copyright (c) 2020 Strappazzon")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>

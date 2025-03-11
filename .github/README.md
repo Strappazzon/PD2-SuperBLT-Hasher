@@ -70,7 +70,7 @@ If you are interested in fixing issues and contributing directly to the code bas
 ## License
 
 ```
-Copyright (c) 2020 - 2021 Alberto Strappazzon
+Copyright (c) 2020 Strappazzon
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
