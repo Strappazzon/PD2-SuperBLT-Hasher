@@ -1,5 +1,17 @@
 # Visual Studio cache/options directory
 **/.vs/
+**/_ReSharper.Caches/
+
+# User-specific files
+**/*.user
+
+# Project data
+**/My Project/*
+!**/My Project/app.manifest
+!**/My Project/Application.Designer.vb
+!**/My Project/*.myapp
+!**/My Project/AssemblyInfo.vb
+!**/My Project/Resources*
 
 # Build results
 **/[Oo]bj
@@ -10,35 +22,27 @@
 **/[Rr]elease
 
 # Compiled source
-**/*.exe
 **/*.dll
 
-# User-specific files
-**/*.user
+# Compiled localization files
+**/*.resources
 
 # NuGet Packages
 # //docs.microsoft.com/en-us/nuget/consume-packages/packages-and-source-control
 **/[Pp]ackages
 **/[Pp]ackages/*
 !**/[Pp]ackages/build/
+**/MigrationBackup/
 **/MetroFramework.txt
 
-# Junk Files (Windows)
-**/[Dd]esktop.ini
-**/[Tt]humbs.db
-
-/.release
-
-# Ruby
-**/Gemfile.lock
-
-# Bundler
-**/.bundle/
-**/vendor/
-**/lib/bundler/man/
+# VSCode
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
 
 # Jekyll
-**/_site*/
-**/.sass-cache/
-**/.jekyll-cache/
-**/.jekyll-metadata
+**/.jekyll-cache
+**/_site*
+
+# Junk Files
+**/[Tt]humbs.db

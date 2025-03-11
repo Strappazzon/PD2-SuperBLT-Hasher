@@ -1,0 +1,15 @@
+root = true
+
+[*]
+end_of_line = crlf
+insert_final_newline = true
+
+[*.{html,md,scss,yml},Gemfile,.tool-versions]
+end_of_line = lf
+
+[*.{md,scss,yml}]
+indent_style = space
+indent_size = 2
+
+[*.md]
+trim_trailing_whitespace = false
