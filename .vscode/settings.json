@@ -1,4 +1,11 @@
 {
+	"[csharp][vb]": {
+		"editor.defaultFormatter": null,
+		"editor.insertSpaces": true,
+		"editor.tabSize": 4,
+		"files.encoding": "utf8bom",
+		"files.eol": "\r\n"
+	},
 	"[html][liquid]": {
 		"editor.defaultFormatter": null,
 		"editor.insertSpaces": false,
@@ -46,13 +53,6 @@
 		],
 		"editor.tabSize": 2,
 		"files.eol": "\n"
-	},
-	"[vb]": {
-		"editor.defaultFormatter": null,
-		"editor.insertSpaces": true,
-		"editor.tabSize": 2,
-		"files.encoding": "utf8bom",
-		"files.eol": "\r\n"
 	},
 	"[xml]": {
 		"editor.defaultFormatter": null,

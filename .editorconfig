@@ -4,11 +4,19 @@ root = true
 end_of_line = crlf
 insert_final_newline = true
 
-[*.{html,md,scss,yml},Gemfile,.tool-versions]
+[Gemfile,.tool-versions]
+end_of_line = lf
+
+[*.{cs,vb}]
+indent_size = 4
+
+[*.{cs,md,scss,vb,yml}]
+indent_style = space
+
+[*.{html,md,scss,yml}]
 end_of_line = lf
 
 [*.{md,scss,yml}]
-indent_style = space
 indent_size = 2
 
 [*.md]
