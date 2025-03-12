@@ -27,7 +27,8 @@
 Imports System.Net.Http
 
 Public Class Updater
-    Private Shared ReadOnly VersionCode As Integer = 5
+    Public Shared ReadOnly VersionString As String = My.Application.Info.Version.ToString().Remove(5)
+    Private Shared ReadOnly VersionCode As Integer = My.Application.Info.Version.Revision
     Private Shared ReadOnly VersionURI As Uri = New Uri("https://raw.githubusercontent.com/Strappazzon/PD2-SuperBLT-Hasher/master/version")
 
     'Check for updates
@@ -38,18 +39,29 @@ Public Class Updater
                 Updater.DefaultRequestHeaders.Add("User-Agent", "SuperBLT Hasher (+https://strappazzon.xyz/PD2-SuperBLT-Hasher)")
                 Dim FetchedVer As Integer = Integer.Parse(Await Updater.GetStringAsync(VersionURI))
 
-                'Compare downloaded SuperBLT hasher version number with the current one
-                If FetchedVer > VersionCode Then
-                    Dim result = MessageBox.Show("A newer version of SuperBLT Hasher is available. Do you want to visit the download page now?", "Update available", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
-                    If result = DialogResult.Yes Then
-                        Process.Start("https://github.com/Strappazzon/PD2-SuperBLT-Hasher/releases/latest")
-                    End If
-                Else
-                    MessageBox.Show("SuperBLT Hasher is up to date.", "No update available", MessageBoxButtons.OK)
-                End If
+                'Compare downloaded SuperBLT Hasher version number with the current one
+                Select Case FetchedVer
+                    Case VersionCode
+                        MessageBox.Show("SuperBLT Hasher is up to date.", Form1.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Case > VersionCode
+                        Dim Response = MessageBox.Show(
+                            "A newer version of SuperBLT Hasher is available. Do you want to visit the download page now?",
+                            Form1.Text,
+                            MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Question,
+                            MessageBoxDefaultButton.Button1
+                        )
+                        If Response = DialogResult.Yes Then
+                            Process.Start("https://github.com/Strappazzon/PD2-SuperBLT-Hasher/releases/latest")
+                        End If
+                    Case < VersionCode
+                        MessageBox.Show("The version in use is greater than the one currently available.", Form1.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Case Else
+                        Exit Select
+                End Select
             End Using
         Catch ex As Exception
-            MessageBox.Show("An error occurred while checking for updates: " & ex.Message(), Form1.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Unable to check for updates: " & ex.Message(), Form1.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

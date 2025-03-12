@@ -35,6 +35,7 @@ Public Class Form1
 #Region "Form Events"
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SetTheme()
+        Me.AboutLabel.Text = "v" + VersionString
     End Sub
 #End Region
 

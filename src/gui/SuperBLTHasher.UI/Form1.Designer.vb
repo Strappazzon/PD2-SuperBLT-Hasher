@@ -136,9 +136,9 @@ Partial Class Form1
         Me.AboutLabel.FontSize = MetroFramework.MetroLabelSize.Small
         Me.AboutLabel.Location = New System.Drawing.Point(18, 362)
         Me.AboutLabel.Name = "AboutLabel"
-        Me.AboutLabel.Size = New System.Drawing.Size(34, 15)
+        Me.AboutLabel.Size = New System.Drawing.Size(42, 15)
         Me.AboutLabel.TabIndex = 10
-        Me.AboutLabel.Text = "v2.1.0"
+        Me.AboutLabel.Text = "version"
         Me.AboutLabel.Theme = MetroFramework.MetroThemeStyle.Dark
         '
         'ToolTips
