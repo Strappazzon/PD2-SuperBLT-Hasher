@@ -1,8 +1,9 @@
-﻿#region "Copyright (c) 2021 Alberto Strappazzon, https://strappazzon.xyz/PD2-SuperBLT-Hasher"
+﻿#region "Copyright (c) 2021 Strappazzon, https://strappazzon.xyz/PD2-SuperBLT-Hasher"
 /*
 
- SuperBLT Hasher CLI - Generate hashes for PAYDAY 2 mods
- Copyright (c) 2021 Alberto Strappazzon, https://strappazzon.xyz/PD2-SuperBLT-Hasher
+ SuperBLT Hasher CLI - Calculate PAYDAY 2 mods hashes
+
+ Copyright (c) 2021 Strappazzon, https://strappazzon.xyz/PD2-SuperBLT-Hasher
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -39,6 +40,7 @@ namespace SuperBLTHasherCLI
             if (args.Length == 0)
             {
                 // Title
+                Console.Write("\n");
                 Console.Write(" ┌─┐┬ ┬┌─┐┌─┐┬─┐┌┐ ┬ ┌┬┐ "); Console.ForegroundColor = ConsoleColor.Cyan; Console.Write("┬ ┬┌─┐┌─┐┬ ┬┌─┐┬─┐\n"); Console.ResetColor();
                 Console.Write(" └─┐│ │├─┘├┤ ├┬┘├┴┐│  │  "); Console.ForegroundColor = ConsoleColor.Cyan; Console.Write("├─┤├─┤└─┐├─┤├┤ ├┬┘\n"); Console.ResetColor();
                 Console.Write(" └─┘└─┘┴  └─┘┴└─└─┘┴─┘┴  "); Console.ForegroundColor = ConsoleColor.Cyan; Console.Write("┴ ┴┴ ┴└─┘┴ ┴└─┘┴└─\n"); Console.ResetColor();
