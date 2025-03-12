@@ -141,7 +141,7 @@ Partial Class Form1
         '
         'CopyBtn
         '
-        Me.CopyBtn.BackgroundImage = Global.SuperBLTHasher.My.Resources.Resources.Clipboard_Icon
+        Me.CopyBtn.BackgroundImage = Global.SuperBLTHasher.My.Resources.Resources.Clipboard
         Me.CopyBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.CopyBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
         Me.CopyBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(1, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(7, Byte), Integer))
@@ -156,7 +156,7 @@ Partial Class Form1
         '
         'UpdateBtn
         '
-        Me.UpdateBtn.BackgroundImage = Global.SuperBLTHasher.My.Resources.Resources.Update_Icon
+        Me.UpdateBtn.BackgroundImage = Global.SuperBLTHasher.My.Resources.Resources.Update
         Me.UpdateBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.UpdateBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
         Me.UpdateBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(1, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(7, Byte), Integer))
@@ -171,7 +171,7 @@ Partial Class Form1
         '
         'DragDropPicture
         '
-        Me.DragDropPicture.Image = Global.SuperBLTHasher.My.Resources.Resources.Drop_Icon
+        Me.DragDropPicture.Image = Global.SuperBLTHasher.My.Resources.Resources.Drop
         Me.DragDropPicture.Location = New System.Drawing.Point(218, 25)
         Me.DragDropPicture.Name = "DragDropPicture"
         Me.DragDropPicture.Size = New System.Drawing.Size(64, 64)

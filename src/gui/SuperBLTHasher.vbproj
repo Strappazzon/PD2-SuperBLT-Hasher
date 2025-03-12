@@ -48,7 +48,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Icon_128.ico</ApplicationIcon>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="HashLib">
@@ -144,11 +144,12 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Icon.ico" />
     <Content Include="Icon_128.ico" />
     <Content Include="MetroFramework.txt" />
-    <None Include="Resources\copy.png" />
+    <None Include="Resources\clipboard.png" />
     <None Include="Resources\update.png" />
-    <None Include="Resources\drop_64.png" />
+    <None Include="Resources\drop.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
