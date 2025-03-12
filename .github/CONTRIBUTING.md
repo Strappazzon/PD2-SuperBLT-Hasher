@@ -52,9 +52,8 @@ so you will need the following dependencies installed:
 - [Visual Studio](https://visualstudio.microsoft.com/vs/)
   - You can [download the community edition](https://visualstudio.microsoft.com/vs/community/) for free
   - The "**.NET desktop development**" Workload is required
-  - The "**.NET Framework 4.8.1 development tools**" Optional component is required
-  - The "**NuGet targets and build tasks**" Individual component is required
-- [NuGet CLI](https://www.nuget.org/downloads) (Included with Visual Studio)
+  - The "**.NET Framework 4.8.1 targeting pack**" Individual component is required
+  - The "**NuGet package manager**" Individual component is required
 - [.NET Framework 4.8 Developer Pack](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net481)
 - [.NET Framework 4.8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net481)
 
