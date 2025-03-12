@@ -5,6 +5,7 @@
 *.scss text eol=lf
 *.yml  text eol=lf
 
+**/.ruby-version  text eol=lf
 **/.tool-versions text eol=lf
 **/Gemfile*       text eol=lf
 

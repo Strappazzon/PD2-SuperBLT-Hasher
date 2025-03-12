@@ -4,9 +4,6 @@ root = true
 end_of_line = crlf
 insert_final_newline = true
 
-[Gemfile,.tool-versions]
-end_of_line = lf
-
 [*.{cs,vb}]
 indent_size = 4
 
@@ -21,3 +18,9 @@ indent_size = 2
 
 [*.md]
 trim_trailing_whitespace = false
+
+[.{ruby-version,tool-versions}]
+end_of_line = lf
+
+[Gemfile]
+end_of_line = lf
