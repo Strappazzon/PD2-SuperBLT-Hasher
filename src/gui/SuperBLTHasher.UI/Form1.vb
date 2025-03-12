@@ -25,16 +25,25 @@
 #End Region
 
 Imports MetroFramework.Forms
+Imports SuperBLTHasher.Hash
+Imports SuperBLTHasher.Theme
+Imports SuperBLTHasher.Updater
 
 Public Class Form1
     Inherits MetroForm
+
+#Region "Form Events"
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        SetTheme()
+    End Sub
+#End Region
 
 #Region "Draw Events"
     Private Sub ToolTips_Draw(sender As Object, e As DrawToolTipEventArgs) Handles ToolTips.Draw
         'Draw tooltip with custom colors
         Me.ToolTips.OwnerDraw = True
-        Me.ToolTips.ForeColor = Color.FromArgb(255, 153, 153, 153)
-        Me.ToolTips.BackColor = Color.FromArgb(255, 17, 17, 17)
+        Me.ToolTips.ForeColor = Colors.Foreground
+        Me.ToolTips.BackColor = Colors.Background
 
         e.DrawBackground()
         e.DrawBorder()
@@ -67,14 +76,14 @@ Public Class Form1
 
             'Hash the input
             Me.HashTextBox.Text = "Calculating..."
-            Hash.HashInput(Me.PathTextBox.Text)
+            HashInput(Me.PathTextBox.Text)
         Else
             MessageBox.Show("Please drop one folder or file at a time.", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
     End Sub
 
     Private Sub UpdateBtn_Click(sender As Object, e As EventArgs) Handles UpdateBtn.Click
-        Updater.CheckUpdates()
+        CheckUpdates()
     End Sub
 #End Region
 End Class

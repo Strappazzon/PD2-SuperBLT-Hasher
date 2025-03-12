@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{5DD8A68B-EC43-4E89-AC9C-9691C529713D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>SuperBLTHasher.My.MyApplication</StartupObject>
+    <StartupObject>SuperBLTHasher.Form1</StartupObject>
     <RootNamespace>SuperBLTHasher</RootNamespace>
     <AssemblyName>SuperBLTHasher</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -117,6 +117,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="SuperBLTHasher.Utils\Theme.vb" />
     <Compile Include="SuperBLTHasher.Utils\Updater.vb" />
   </ItemGroup>
   <ItemGroup>
@@ -146,6 +147,9 @@
   <ItemGroup>
     <Content Include="Icon.ico" />
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\update_dark.png" />
+    <None Include="Resources\drop_dark.png" />
+    <None Include="Resources\clipboard_dark.png" />
     <None Include="Resources\clipboard.png" />
     <None Include="Resources\update.png" />
     <None Include="Resources\drop.png" />

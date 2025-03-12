@@ -25,6 +25,7 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.PathTextBox = New MetroFramework.Controls.MetroTextBox()
         Me.DragDropPanel = New MetroFramework.Controls.MetroPanel()
+        Me.DragDropPicture = New System.Windows.Forms.PictureBox()
         Me.DragDropHelpLabel = New MetroFramework.Controls.MetroLabel()
         Me.HashTextBox = New MetroFramework.Controls.MetroTextBox()
         Me.PathLabel = New MetroFramework.Controls.MetroLabel()
@@ -33,14 +34,13 @@ Partial Class Form1
         Me.ToolTips = New MetroFramework.Components.MetroToolTip()
         Me.CopyBtn = New System.Windows.Forms.Button()
         Me.UpdateBtn = New System.Windows.Forms.Button()
-        Me.DragDropPicture = New System.Windows.Forms.PictureBox()
         Me.DragDropPanel.SuspendLayout()
         CType(Me.DragDropPicture, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PathTextBox
         '
-        Me.PathTextBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(23, Byte), Integer), CType(CType(23, Byte), Integer))
+        Me.PathTextBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.PathTextBox.CustomBackground = True
         Me.PathTextBox.FontSize = MetroFramework.MetroTextBoxSize.Medium
         Me.PathTextBox.Location = New System.Drawing.Point(16, 90)
@@ -72,6 +72,15 @@ Partial Class Form1
         Me.DragDropPanel.VerticalScrollbarHighlightOnWheel = False
         Me.DragDropPanel.VerticalScrollbarSize = 10
         '
+        'DragDropPicture
+        '
+        Me.DragDropPicture.Location = New System.Drawing.Point(218, 25)
+        Me.DragDropPicture.Name = "DragDropPicture"
+        Me.DragDropPicture.Size = New System.Drawing.Size(64, 64)
+        Me.DragDropPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.DragDropPicture.TabIndex = 3
+        Me.DragDropPicture.TabStop = False
+        '
         'DragDropHelpLabel
         '
         Me.DragDropHelpLabel.AutoSize = True
@@ -87,7 +96,7 @@ Partial Class Form1
         '
         'HashTextBox
         '
-        Me.HashTextBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(23, Byte), Integer), CType(CType(23, Byte), Integer))
+        Me.HashTextBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.HashTextBox.CustomBackground = True
         Me.HashTextBox.FontSize = MetroFramework.MetroTextBoxSize.Medium
         Me.HashTextBox.Location = New System.Drawing.Point(16, 150)
@@ -141,7 +150,6 @@ Partial Class Form1
         '
         'CopyBtn
         '
-        Me.CopyBtn.BackgroundImage = Global.SuperBLTHasher.My.Resources.Resources.Clipboard
         Me.CopyBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.CopyBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
         Me.CopyBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(1, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(7, Byte), Integer))
@@ -156,7 +164,6 @@ Partial Class Form1
         '
         'UpdateBtn
         '
-        Me.UpdateBtn.BackgroundImage = Global.SuperBLTHasher.My.Resources.Resources.Update
         Me.UpdateBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.UpdateBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
         Me.UpdateBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(1, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(7, Byte), Integer))
@@ -168,16 +175,6 @@ Partial Class Form1
         Me.UpdateBtn.TabIndex = 11
         Me.ToolTips.SetToolTip(Me.UpdateBtn, "Check for updates.")
         Me.UpdateBtn.UseVisualStyleBackColor = True
-        '
-        'DragDropPicture
-        '
-        Me.DragDropPicture.Image = Global.SuperBLTHasher.My.Resources.Resources.Drop
-        Me.DragDropPicture.Location = New System.Drawing.Point(218, 25)
-        Me.DragDropPicture.Name = "DragDropPicture"
-        Me.DragDropPicture.Size = New System.Drawing.Size(64, 64)
-        Me.DragDropPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.DragDropPicture.TabIndex = 3
-        Me.DragDropPicture.TabStop = False
         '
         'Form1
         '
