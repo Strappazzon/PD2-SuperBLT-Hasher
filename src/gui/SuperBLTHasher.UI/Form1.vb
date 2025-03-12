@@ -1,6 +1,6 @@
 ﻿#Region "Copyright (c) 2020 Strappazzon, https://strappazzon.xyz/PD2-SuperBLT-Hasher"
 ''
-'' SuperBLT Hasher - Generate hashes for PAYDAY 2 mods
+'' SuperBLT Hasher - Calculate PAYDAY 2 mods hashes
 ''
 '' Copyright (c) 2020 Strappazzon, https://strappazzon.xyz/PD2-SuperBLT-Hasher
 ''
@@ -32,9 +32,9 @@ Public Class Form1
 #Region "Draw Events"
     Private Sub ToolTips_Draw(sender As Object, e As DrawToolTipEventArgs) Handles ToolTips.Draw
         'Draw tooltip with custom colors
-        ToolTips.OwnerDraw = True
-        ToolTips.ForeColor = Color.FromArgb(255, 153, 153, 153)
-        ToolTips.BackColor = Color.FromArgb(255, 17, 17, 17)
+        Me.ToolTips.OwnerDraw = True
+        Me.ToolTips.ForeColor = Color.FromArgb(255, 153, 153, 153)
+        Me.ToolTips.BackColor = Color.FromArgb(255, 17, 17, 17)
 
         e.DrawBackground()
         e.DrawBorder()
@@ -44,8 +44,8 @@ Public Class Form1
 
 #Region "Controls"
     Private Sub CopyBtn_Click(sender As Object, e As EventArgs) Handles CopyBtn.Click
-        If Not HashTextBox.Text = "Error." Then
-            Clipboard.SetText(HashTextBox.Text)
+        If Not Me.HashTextBox.Text = "Error." Then
+            Clipboard.SetText(Me.HashTextBox.Text)
         End If
     End Sub
 
@@ -60,16 +60,16 @@ Public Class Form1
     Private Sub DragDropPanel_DragDrop(sender As Object, e As DragEventArgs) Handles DragDropPanel.DragDrop
         Dim DroppedItems As String() = e.Data.GetData(DataFormats.FileDrop)
 
-        'Allow only one folder or file
+        'Allow only one folder/file
         If DroppedItems.Length <= 1 Then
             'Write the folder or file path
-            PathTextBox.Text = DroppedItems.First
+            Me.PathTextBox.Text = DroppedItems.First
 
             'Hash the input
-            HashTextBox.Text = "Computing..."
-            Hash.HashInput(PathTextBox.Text)
+            Me.HashTextBox.Text = "Calculating..."
+            Hash.HashInput(Me.PathTextBox.Text)
         Else
-            MessageBox.Show("Please drop one folder or file at a time.", Text, MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("Please drop one folder or file at a time.", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
     End Sub
 

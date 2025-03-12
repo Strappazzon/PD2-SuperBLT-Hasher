@@ -1,6 +1,6 @@
 ﻿#Region "Copyright (c) 2020 Strappazzon, https://strappazzon.xyz/PD2-SuperBLT-Hasher"
 ''
-'' SuperBLT Hasher - Generate hashes for PAYDAY 2 mods
+'' SuperBLT Hasher - Calculate PAYDAY 2 mods hashes
 ''
 '' Copyright (c) 2020 Strappazzon, https://strappazzon.xyz/PD2-SuperBLT-Hasher
 ''
@@ -32,22 +32,20 @@ Public Class Hash
     Private Shared WithEvents AsyncHasher As BackgroundWorker = New BackgroundWorker()
     Private Shared Property ErrorMessage As String = Nothing
 
-    Public Shared Sub HashInput(ByVal inputPath As String)
+    Public Shared Sub HashInput(inputPath As String)
         AsyncHasher.RunWorkerAsync(inputPath)
     End Sub
 
 #Region "Async subroutines"
     Private Shared Sub AsyncHasher_DoWork(sender As Object, e As DoWorkEventArgs) Handles AsyncHasher.DoWork
         Try
-            'Check whether the specified/dropped path is a folder or a file
+            'Check whether path is a folder or a file
             '//stackoverflow.com/a/439478
             Dim IsDir As Boolean = (File.GetAttributes(e.Argument()) And FileAttributes.Directory) = FileAttributes.Directory
             If IsDir = True Then
-                'Hash the selected folder
                 Dim Hash As String = Hasher.HashDirectory(e.Argument())
                 e.Result = Hash
             Else
-                'Hash the selected file
                 Dim Hash As String = Hasher.HashFile(e.Argument())
                 e.Result = Hash
             End If

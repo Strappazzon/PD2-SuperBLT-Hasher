@@ -1,6 +1,6 @@
 ﻿#Region "Copyright (c) 2020 Strappazzon, https://strappazzon.xyz/PD2-SuperBLT-Hasher"
 ''
-'' SuperBLT Hasher - Generate hashes for PAYDAY 2 mods
+'' SuperBLT Hasher - Calculate PAYDAY 2 mods hashes
 ''
 '' Copyright (c) 2020 Strappazzon, https://strappazzon.xyz/PD2-SuperBLT-Hasher
 ''
