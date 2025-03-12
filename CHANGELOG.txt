@@ -1,7 +1,12 @@
+2.2.0
+  - Enhancement: Added automatic dark/light theme
+  - Fix: Unhandled exception when trying to copy empty hash to clipboard
+
 2.1.0
  - Decoupled GUI and CLI
  - Removed settings
- - Added buttons to manually check for updates and copy the hash to clipboard
+ - Added button to manually check for updates
+ - Added button to copy the hash to clipboard
 
 2.0.0
  - Enhancement: Settings will be saved on a configuration file and will no longer be lost when moving/renaming SuperBLT Hasher executable
