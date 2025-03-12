@@ -9,8 +9,8 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("SuperBLT Hasher")>
-<Assembly: AssemblyDescription("Generate hashes for PAYDAY 2 mods")>
-<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyDescription("Calculate PAYDAY 2 mods hashes")>
+<Assembly: AssemblyCompany("Strappazzon")>
 <Assembly: AssemblyProduct("SuperBLT Hasher")>
 <Assembly: AssemblyCopyright("Copyright (c) 2020 Strappazzon")>
 <Assembly: AssemblyTrademark("")>

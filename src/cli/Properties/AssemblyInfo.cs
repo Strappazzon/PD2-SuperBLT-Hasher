@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("SuperBLT Hasher CLI")]
-[assembly: AssemblyDescription("Generate hashes for PAYDAY 2 mods")]
+[assembly: AssemblyDescription("Calculate PAYDAY 2 mods hashes")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Strappazzon")]
 [assembly: AssemblyProduct("SuperBLTHasher CLI")]
-[assembly: AssemblyCopyright("Copyright (c) 2021 Alberto Strappazzon")]
+[assembly: AssemblyCopyright("Copyright (c) 2021 Strappazzon")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
