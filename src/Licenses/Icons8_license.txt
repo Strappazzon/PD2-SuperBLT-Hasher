@@ -2,6 +2,11 @@ Icons8
 https://icons8.com/
 https://icons8.com/license
 
-- Available Updates (update.png) https://icons8.com/icon/set/update/windows--white
-- Drop Shipping (drop_64.png) https://icons8.com/icon/set/drop/windows--white
-- Inspection (copy.png) https://icons8.com/icon/set/clipboard/windows--white
+- Check for Updates (update.png)
+  https://icons8.com/icon/22104/available-updates
+
+- Drop (drop.png)
+  https://icons8.com/icon/xtjeEibRwfUs/drop-shipping
+
+- Clipboard (clipboard.png)
+  https://icons8.com/icon/QJ0REVmZFyps/task-completed
