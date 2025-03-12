@@ -1,0 +1,22 @@
+cicd:
+  - .github/workflows/**
+
+dependencies:
+  - docs/.ruby-version
+  - docs/Gemfile
+  - docs/Gemfile.lock
+  # - src/cli/SuperBLTHasherCLI.csproj
+  # - src/gui/SuperBLTHasher.vbproj
+
+documentation:
+  - .github/CONTRIBUTING.md
+  - .github/README.md
+  - docs/README.md
+
+ui:
+  - src/gui/SuperBLTHasher.UI/**
+  - src/gui/My Project/Resources.Designer.vb
+  - src/gui/My Project/Resources.resx
+
+website:
+  - docs/**
