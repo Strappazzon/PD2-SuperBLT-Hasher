@@ -1,0 +1,21 @@
+[*.config]
+charset = utf-8
+indent_size = 4
+indent_style = space
+
+[*.{manifest,myapp,resx,settings,vb}]
+charset = utf-8-bom
+
+[*.{manifest,myapp,resx,settings,vbproj}]
+indent_size = 2
+indent_style = space
+
+[*.sln]
+indent_style = tab
+tab_width = 4
+
+[*.{cs,vb}]
+charset = utf-8-bom
+indent_size = 4
+indent_style = space
+insert_final_newline = true
