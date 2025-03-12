@@ -31,6 +31,7 @@ Imports ZNix.SuperBLT
 Public Class Hash
     Private Shared WithEvents AsyncHasher As BackgroundWorker = New BackgroundWorker()
     Private Shared Property ErrorMessage As String = Nothing
+    Public Shared ReadOnly ErrorText As String = "Error."
 
     Public Shared Sub HashInput(inputPath As String)
         AsyncHasher.RunWorkerAsync(inputPath)
@@ -58,7 +59,7 @@ Public Class Hash
         If ErrorMessage = Nothing Then
             Form1.HashTextBox.Text = e.Result()
         Else
-            Form1.HashTextBox.Text = "Error."
+            Form1.HashTextBox.Text = ErrorText
             MessageBox.Show("An error occurred while attempting to compute the hash: " & ErrorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             ErrorMessage = Nothing
         End If

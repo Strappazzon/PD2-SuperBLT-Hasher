@@ -54,9 +54,11 @@ Public Class Form1
 
 #Region "Controls"
     Private Sub CopyBtn_Click(sender As Object, e As EventArgs) Handles CopyBtn.Click
-        If Not Me.HashTextBox.Text = "Error." Then
-            Clipboard.SetText(Me.HashTextBox.Text)
+        If Me.HashTextBox.Text = ErrorText Or Me.HashTextBox.Text = Nothing Then
+            Return
         End If
+
+        Clipboard.SetText(Me.HashTextBox.Text)
     End Sub
 
     Private Sub DragDropPanel_DragEnter(sender As Object, e As DragEventArgs) Handles DragDropPanel.DragEnter
