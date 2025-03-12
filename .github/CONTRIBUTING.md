@@ -57,23 +57,25 @@ so you will need the following dependencies installed:
 - [.NET Framework 4.8 Developer Pack](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net481)
 - [.NET Framework 4.8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net481)
 
-<!-- TODO: Acquire HashLib DLL -->
+#### Building (CLI)
+
+1. [Download](https://gitlab.com/SuperBLT/HashLib/tree/05b104ea/c%23) and compile HashLib
+2. Copy the output DLL inside `.\gui`
+3. From Visual Studio, select **Open a project or solution**, then open the solution file `SuperBLTHasherCLI.sln`
+4. Compile using **Build** -> **Build Solution**
+   - The compiled binary will be inside the `.\cli\bin` folder
 
 #### Building (GUI)
 
-1. From Visual Studio, select **Open a project or solution** and open the `SuperBLTHasher.sln` solution file located in your cloned repository
-2. Compile using **Build** -> **Build Solution**
-   - The compiled binary will be inside the `.\gui\bin\Debug` folder
-
-#### Building (CLI)
-
-1. From Visual Studio, select **Open a project or solution** and open the `SuperBLTHasherCLI.sln` solution file located in your cloned repository
-2. Compile using **Build** -> **Build Solution**
-   - The compiled binary will be inside the `.\cli\bin\Debug` folder
+1. [Download](https://gitlab.com/SuperBLT/HashLib/tree/05b104ea/c%23) and compile HashLib
+2. Copy the output DLL inside `.\gui`
+3. From Visual Studio, select **Open a project or solution**, then open the solution file `SuperBLTHasher.sln`
+4. Compile using **Build** -> **Build Solution**
+   - The compiled binary will be inside the `.\gui\bin` folder
 
 ## Code style and Conventions
 
-### C#
+### C\#
 
 The general rule this project follows is "use Visual Studio defaults".
 Using an IDE that supports the [.editorconfig](https://editorconfig.org/) standard will make this much simpler.
