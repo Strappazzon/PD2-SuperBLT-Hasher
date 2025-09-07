@@ -7,20 +7,14 @@ insert_final_newline = true
 [*.{cs,vb}]
 indent_size = 4
 
-[*.{cs,md,scss,vb,yml}]
+[*.{cs,md,vb,yml}]
 indent_style = space
 
-[*.{html,md,scss,yml}]
+[*.{md,yml}]
 end_of_line = lf
 
-[*.{md,scss,yml}]
+[*.{md,yml}]
 indent_size = 2
 
 [*.md]
 trim_trailing_whitespace = false
-
-[.{ruby-version,tool-versions}]
-end_of_line = lf
-
-[Gemfile]
-end_of_line = lf
