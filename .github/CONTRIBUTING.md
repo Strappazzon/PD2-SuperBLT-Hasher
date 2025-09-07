@@ -38,13 +38,7 @@ See: [Add Reactions](https://github.blog/news-insights/product-news/add-reaction
 
 Before you can start contributing, you'll need to set up your environment first.
 
-### Website
-
-See [docs/README.md](../docs/README.md).
-
-### Application
-
-#### Dependencies
+### Dependencies
 
 SuperBLT Hasher is written in [Visual Basic (.NET)](https://learn.microsoft.com/en-us/dotnet/visual-basic/) and [C#](https://learn.microsoft.com/en-us/dotnet/csharp/)
 so you will need the following dependencies installed:
@@ -57,7 +51,7 @@ so you will need the following dependencies installed:
 - [.NET Framework 4.8 Developer Pack](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net481)
 - [.NET Framework 4.8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net481)
 
-#### Building (CLI)
+### Building (CLI)
 
 1. [Download](https://gitlab.com/SuperBLT/HashLib/tree/05b104ea/c%23) and compile HashLib
 2. Copy the output DLL inside `.\gui`
@@ -65,7 +59,7 @@ so you will need the following dependencies installed:
 4. Compile using **Build** -> **Build Solution**
    - The compiled binary will be inside the `.\cli\bin` folder
 
-#### Building (GUI)
+### Building (GUI)
 
 1. [Download](https://gitlab.com/SuperBLT/HashLib/tree/05b104ea/c%23) and compile HashLib
 2. Copy the output DLL inside `.\gui`
@@ -93,11 +87,8 @@ Using an IDE that supports the [.editorconfig](https://editorconfig.org/) standa
 
 ### Markdown
 
-Documentation is written in [GitHub Flavored Markdown](https://docs.github.com/en/get-started/writing-on-github).  
-Some website pages are written in [GitHub Flavored Markdown](https://docs.github.com/en/get-started/writing-on-github)
-and rendered by [kramdown](https://kramdown.gettalong.org/).
-
-In both cases, [markdownlint](https://github.com/DavidAnson/markdownlint) is used to enforce style rules for Markdown files.
+Documentation is written in [GitHub Flavored Markdown](https://docs.github.com/en/get-started/writing-on-github)
+and [markdownlint](https://github.com/DavidAnson/markdownlint) is used to enforce style rules for Markdown files.
 
 ## Submitting Changes
 
@@ -139,7 +130,6 @@ It only contains the most relevant files and folders as some of them are self-ex
 
 ```sh
 .
-├── docs                         # Website source
 ├── src                          # SuperBLT Hasher source
 │   ├── cli
 │   ├── gui

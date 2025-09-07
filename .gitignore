@@ -40,9 +40,5 @@
 !.vscode/extensions.json
 !.vscode/settings.json
 
-# Jekyll
-**/.jekyll-cache
-**/_site*
-
 # Junk Files
 **/[Tt]humbs.db

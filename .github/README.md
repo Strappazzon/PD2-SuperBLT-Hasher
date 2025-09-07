@@ -1,6 +1,6 @@
 <!-- markdownlint-disable-next-line MD041 -->
 <div align="center">
-  <img width="96" src="../docs/assets/img/favicon.png" alt="Logo">
+  <img width="96" src="https://strappazzon.xyz/projects/pd2-superblt-hasher/assets/img/favicon.png" alt="Logo">
 </div>
 
 <div align="center">
@@ -32,4 +32,4 @@
 
 ## Screenshot
 
-![SuperBLT Hasher Screenshot](../docs/assets/img/screenshot.png)
+![SuperBLT Hasher Screenshot](https://strappazzon.xyz/projects/pd2-superblt-hasher/assets/img/screenshot.png)
